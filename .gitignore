@@ -1,0 +1,18 @@
+# dotfilesへのシンボリックリンク。リンク先がこのマシン固有の絶対パスなので追跡しない。
+# 末尾スラッシュを付けるとディレクトリにしかマッチせず、シンボリックリンクが素通りする
+node_modules
+package.json
+
+# Slidevが生成するもの
+dist/
+.slidev/
+
+# 書き出した成果物。slides.mdからいつでも再生成できる
+*.pdf
+*.pptx
+export/
+
+# 公開リポジトリなので、decks配下は既定で追跡しない(置き場所を間違えても公開されない側に倒す)。
+# 公開してよいデッキだけを decks/public/ に置く
+decks/*
+!decks/public/

@@ -1,0 +1,12 @@
+#!/bin/sh
+# 公開リポジトリなので、decks/public/ 以外のデッキがコミットされるのを防ぐ。
+# .gitignore(decks/* → !decks/public/)をすり抜ける git add -f やルール編集ミスの最後の関所。
+leaked=$(git diff --cached --name-only --diff-filter=ACMR | grep '^decks/' | grep -v '^decks/public/')
+
+if [ -n "$leaked" ]; then
+  echo "Error: decks/public/ 以外のデッキがステージされています。" >&2
+  echo "$leaked" | sed 's/^/  /' >&2
+  echo "公開してよい資料なら decks/public/ へ移動してください。" >&2
+  echo "意図的に通す場合のみ git commit --no-verify。" >&2
+  exit 1
+fi
