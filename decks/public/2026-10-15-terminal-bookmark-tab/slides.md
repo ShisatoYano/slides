@@ -1,6 +1,6 @@
 ---
 theme: default
-title: ターミナル+CLIを活用したブックマーク・タブ管理術
+title: ターミナル+CLIによるブックマーク・タブ管理術
 # 日本語がGoogle Fonts側の欧文フォントにフォールバックして崩れないよう、和文フォントを明示する
 fonts:
   sans: Noto Sans JP
@@ -11,7 +11,7 @@ mdc: true
 layout: cover
 ---
 
-# ターミナル+CLIを活用した<br>ブックマーク・タブ管理術
+# ターミナル+CLIによる<br>ブックマーク・タブ管理術
 
 buku × tabctl × nb × fzf × Claude Code
 
