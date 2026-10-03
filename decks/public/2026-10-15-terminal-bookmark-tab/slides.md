@@ -14,24 +14,19 @@ layout: none
 
 <div class="relative px-14 pt-12">
 
-  <div class="text-xl font-bold text-gray-600">Terminal Night 3</div>
-
   <div class="mt-14">
-    <div class="w-12 h-1 bg-sky-700 mb-6"></div>
     <h1 class="!text-5xl !font-black !leading-tight text-sky-700">ターミナル+CLIによる<br>ブックマーク・タブ管理術</h1>
     <div class="mt-5 text-lg font-bold text-gray-400">Terminal Night 3 2026.10.15</div>
   </div>
+
+  <div class="absolute left-14 top-[420px] flex items-center gap-5">
+    <img src="./images/icon.jpeg" class="w-25 h-25 rounded-full border-4 border-sky-100"/>
+    <div>
+      <div class="text-xl font-bold">Shisato Yano</div>
+      <div class="text-sm text-gray-400">自動運転システムエンジニア</div>
+    </div>
+  </div>
 </div>
-
-# ターミナル+CLIによる<br>ブックマーク・タブ管理術
-
-buku × tabctl × nb × fzf × Claude Code
-
-<div class="mt-12 opacity-80">
-Terminal Night 3 / 2026-10-15 / Shisato Yano
-</div>
-
-<div class="abs-br m-6 text-sm opacity-60">#terminalnight</div>
 
 <!--
 [0:00-0:20] 挨拶だけ。すぐ次へ。
