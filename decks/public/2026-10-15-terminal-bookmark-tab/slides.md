@@ -6,10 +6,22 @@ fonts:
   sans: Noto Sans JP
   serif: Noto Serif JP
   mono: JetBrains Mono
+  weights: '400,700,900'
 transition: slide-left
 mdc: true
-layout: cover
+layout: none
 ---
+
+<div class="relative px-14 pt-12">
+
+  <div class="text-xl font-bold text-gray-600">Terminal Night 3</div>
+
+  <div class="mt-14">
+    <div class="w-12 h-1 bg-sky-700 mb-6"></div>
+    <h1 class="!text-5xl !font-black !leading-tight text-sky-700">ターミナル+CLIによる<br>ブックマーク・タブ管理術</h1>
+    <div class="mt-5 text-lg font-bold text-gray-400">#terminalnight 2026.10.15</div>
+  </div>
+</div>
 
 # ターミナル+CLIによる<br>ブックマーク・タブ管理術
 
