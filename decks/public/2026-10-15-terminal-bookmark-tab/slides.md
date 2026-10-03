@@ -19,7 +19,7 @@ layout: none
   <div class="mt-14">
     <div class="w-12 h-1 bg-sky-700 mb-6"></div>
     <h1 class="!text-5xl !font-black !leading-tight text-sky-700">ターミナル+CLIによる<br>ブックマーク・タブ管理術</h1>
-    <div class="mt-5 text-lg font-bold text-gray-400">#terminalnight 2026.10.15</div>
+    <div class="mt-5 text-lg font-bold text-gray-400">Terminal Night 3 2026.10.15</div>
   </div>
 </div>
 
