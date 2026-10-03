@@ -1,6 +1,6 @@
 ---
 theme: default
-title: ターミナル+CLIによるブックマーク・タブ管理術
+title: ターミナル+CLIによるブックマーク・タブの整理整頓術
 # 日本語がGoogle Fonts側の欧文フォントにフォールバックして崩れないよう、和文フォントを明示する
 fonts:
   sans: Noto Sans JP
@@ -15,7 +15,7 @@ layout: none
 <div class="relative px-14 pt-12">
 
   <div class="mt-14">
-    <h1 class="!text-5xl !font-black !leading-tight text-sky-700">ターミナル+CLIによる<br>ブックマーク・タブ管理術</h1>
+    <h1 class="!text-5xl !font-black !leading-tight text-sky-700">ターミナル+CLIによる<br>ブックマーク・タブの整理整頓術</h1>
     <div class="mt-5 text-lg font-bold text-gray-400">Terminal Night 3 2026.10.15</div>
   </div>
 
