@@ -33,13 +33,19 @@ layout: none
 -->
 
 ---
+layout: none
+---
 
-## 自己紹介
+<div class="absolute left-14 top-10 text-3xl font-black">自己紹介</div>
 
-- **Shisato Yano**
-- 自動運転システムを開発するソフトウェアエンジニア
-- 開発環境は WezTerm + Neovim + Claude Code、ほぼターミナルに住んでいる
-- dotfiles を公開しています → `github.com/ShisatoYano/dotfiles`
+<div class="absolute inset-0 flex items-center justify-center gap-16">
+  <img src="./images/icon.jpeg" class="w-64 h-64 rounded-full border-4 border-sky-100"/>
+  <div>
+    <div class="text-4xl font-black">Shisato Yano</div>
+  </div>
+</div>
+
+
 
 <!--
 [0:20-0:50] 短く。「ターミナルに住んでいるのに、ブラウザだけマウス操作のまま残っていた」という次の話へつなぐ。
