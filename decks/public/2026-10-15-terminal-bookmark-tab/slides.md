@@ -28,10 +28,6 @@ layout: none
   </div>
 </div>
 
-<!--
-[0:00-0:20] 挨拶だけ。すぐ次へ。
--->
-
 ---
 layout: none
 ---
@@ -42,14 +38,24 @@ layout: none
   <img src="./images/icon.jpeg" class="w-64 h-64 rounded-full border-4 border-sky-100"/>
   <div>
     <div class="text-4xl font-black">Shisato Yano</div>
+    <div class="mt-5 text-base leading-relaxed text-gray-600">
+      仕事: 車や船の自動運転システムを作るソフトウェアエンジニア<br>
+      趣味: 卓球、ボルダリング、旅行、OSS開発<br>
+      一言: 今日が初イベント参加、初登壇です！よろしくおねがいします！！
+    </div>
+    <div class="mt-6 flex gap-6 text-base">
+      <a href="https://x.com/4310sy" target="_blank" class="flex items-center gap-2 !text-gray-700 !border-none">
+        <carbon-logo-x class="text-xl" />@4310sy
+      </a>
+      <a href="https://github.com/ShisatoYano" target="_blank" class="flex items-center gap-2 !text-gray-700 !border-none">
+        <carbon-logo-github class="text-xl" />ShisatoYano
+      </a>
+      <a href="https://github.com/ShisatoYano/AutonomousVehicleControlBeginnersGuide" target="_blank" class="flex items-center gap-2 !text-gray-700 !border-none">
+        <carbon-logo-github class="text-xl" />OSSリポジトリ
+      </a>
+    </div>
   </div>
 </div>
-
-
-
-<!--
-[0:20-0:50] 短く。「ターミナルに住んでいるのに、ブラウザだけマウス操作のまま残っていた」という次の話へつなぐ。
--->
 
 ---
 
