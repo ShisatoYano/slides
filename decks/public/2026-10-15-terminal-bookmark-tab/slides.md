@@ -50,9 +50,6 @@ layout: none
       <a href="https://github.com/ShisatoYano" target="_blank" class="flex items-center gap-2 !text-gray-700 !border-none">
         <carbon-logo-github class="text-xl" />ShisatoYano
       </a>
-      <a href="https://github.com/ShisatoYano/AutonomousVehicleControlBeginnersGuide" target="_blank" class="flex items-center gap-2 !text-gray-700 !border-none">
-        <carbon-logo-github class="text-xl" />OSSリポジトリ
-      </a>
     </div>
   </div>
 </div>
