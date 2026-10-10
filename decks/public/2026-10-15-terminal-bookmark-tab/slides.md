@@ -29,10 +29,8 @@ layout: none
 </div>
 
 ---
-layout: none
----
 
-<div class="absolute left-14 top-10 text-3xl font-black">自己紹介</div>
+<div class="text-3xl font-black">自己紹介</div>
 
 <div class="absolute inset-0 flex items-center justify-center gap-16">
   <img src="./images/icon.jpeg" class="w-64 h-64 rounded-full border-4 border-sky-100"/>
@@ -56,26 +54,37 @@ layout: none
 
 ---
 
-## 困っていたこと
+<div class="text-3xl font-black">ブックマーク・タブ管理のつらみあるある</div>
+
+<div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
+
+<div class="text-base whitespace-nowrap">
 
 <v-clicks>
 
-- 🗂️ **タブが溜まり続ける** — 「あとで読む」が閉じられず、気づくと数十枚に
-- 🫥 **読んだ内容を忘れる** — ブックマークはURLだけで、何が書いてあったかが残らない
-- 🔁 **毎朝同じページを手で開く** — タスク管理、勤怠、Slack、カレンダー、メール…
+- 整理できずに散らかり続ける
+- 見たいものをぱっと探せない
+- また探すの面倒だから開きっぱにしちゃう
+- 操作するときにターミナルから出るのが面倒
 
 </v-clicks>
 
-<div v-click class="mt-10 text-xl">
-
-👉 ブラウザは**表示するだけ**にして、<br>
-**開く・閉じる・残す・探す**はターミナルとキーボードで行う
-
 </div>
 
-<!--
-[0:50-1:40] 聴衆にも心当たりを聞く感じで。最後の一文がこの発表の主張。
--->
+<div class="grid">
+  <img v-click="[1, 2]" src="./images/bookmarkbar.png" class="[grid-area:1/1] h-80 w-full object-contain" />
+  <img v-click="[2, 3]" src="./images/too_many_bookmarks.png" class="[grid-area:1/1] h-80 w-full object-contain" />
+  <img v-click="[3, 4]" src="./images/too_many_tabs.png" class="[grid-area:1/1] h-80 w-full object-contain" />
+  <img v-click="4" src="./images/edit_bookmark.png" class="[grid-area:1/1] h-80 w-full object-contain" />
+</div>
+  
+</div>
+
+<div v-click class="mt-10 text-xl font-black text-red-500 text-center">
+
+  ターミナル+CLIでまとめて解決しちゃおう！！
+
+</div>
 
 ---
 
