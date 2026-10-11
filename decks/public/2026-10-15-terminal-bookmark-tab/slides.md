@@ -88,6 +88,32 @@ layout: none
 
 ---
 
+<div class="text-3xl font-black">とりまターミナルでブックマーク管理</div>
+
+<div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
+
+<div class="text-base whitespace-nowrap">
+
+- buku
+  - ローカルのDBでブックマークを管理できるCLIツール
+  - <carbon-logo-github /> [jarun/buku](https://github.com/jarun/buku)
+
+</div>
+
+<div class="grid">
+  <img v-click src="./images/buku_list.png" class="[grid-area:1/1] h-80 w-full object-contain" />
+</div>
+
+</div>
+
+<div v-click class="mt-10 text-xl font-black text-red-500 text-center">
+
+  ブックマークバーが散らかる心配なし！！
+
+</div>
+
+---
+
 ## 全体像
 
 ```mermaid {scale: 0.6}
