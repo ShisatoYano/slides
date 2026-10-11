@@ -117,6 +117,47 @@ layout: none
 
 <div class="text-3xl font-black">あいまい検索とタグ付けでさくっと見つける</div>
 
+<div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
+
+<div class="text-base whitespace-nowrap">
+
+- bukuのタグ付け機能
+  - ジャンルなどによってタグ付け
+  - フォルダ作って整理するような面倒さがなくなる
+  - タグ付け、削除の操作はターミナルからコマンド一発
+- fzfとの連携
+  - <carbon-logo-github /> [junegunn/fzf](https://github.com/junegunn/fzf)
+  - タイトルやタグであいまい検索して選択
+  - ヒットした複数ブックマークも同時に開けちゃう
+
+</div>
+
+<div class="grid">
+
+```bash
+# タグを付けて追加
+buku -a https://example.com cli,linux
+
+# 既存のブックマーク(15番)にタグを追加/削除
+buku -u 15 --tag + terminal
+buku -u 15 --tag - linux
+
+# タグで絞り込む
+buku -t cli
+
+# fzfであいまい検索して開く(自作関数)
+bb
+```
+
+</div>
+
+</div>
+
+<div v-click class="mt-10 text-xl font-black text-red-500 text-center">
+
+  これならいくらブックマークが増えても大丈夫(なはず)！！
+
+</div>
 
 ---
 
