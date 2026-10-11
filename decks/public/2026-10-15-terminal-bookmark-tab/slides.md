@@ -257,3 +257,26 @@ tabnote() {
 
 ---
 
+<div class="text-3xl font-black">設定はこちら</div>
+
+<div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
+
+<div class="text-base whitespace-nowrap">
+
+- 同じ環境設定がスクリプト1発で自動構築できます
+- Linux(Ubuntu)でのみ動作確認済み
+- 不具合とか改善アイディアあったらいつでもIssue/PRください！
+
+</div>
+
+<div class="grid">
+
+<a href="https://github.com/ShisatoYano/dotfiles" target="_blank" class="!border-none">
+  <img src="https://opengraph.githubassets.com/1/ShisatoYano/dotfiles" class="w-120 rounded-lg shadow" />
+</a>
+
+</div>
+
+</div>
+
+---
