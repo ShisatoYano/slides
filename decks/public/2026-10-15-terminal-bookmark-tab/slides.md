@@ -96,6 +96,7 @@ layout: none
 
 - buku
   - ローカルのDBでブックマークを管理できるCLIツール
+  - mdやhtml形式でのインポート/エクスポートも可能
   - <carbon-logo-github /> [jarun/buku](https://github.com/jarun/buku)
 
 </div>
@@ -111,6 +112,11 @@ layout: none
   ブックマークバーが散らかる心配なし！！
 
 </div>
+
+---
+
+<div class="text-3xl font-black">あいまい検索とタグ付けでさくっと見つける</div>
+
 
 ---
 
