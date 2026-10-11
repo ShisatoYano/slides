@@ -207,3 +207,53 @@ tabarchive() {
 
 ---
 
+<div class="text-3xl font-black">保存時に要約メモを作る</div>
+
+<div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
+
+<div class="text-base whitespace-nowrap">
+
+- Claude Codeとの連携
+  - ブックマーク保存時にページ本文を取得
+  - 「要約して」のプロンプトと一緒にClaudeに投げる
+- nbとの連携
+  - マークダウンでメモを取れるCLIツール
+  - Claudeが生成した要約をnbでメモとして保存
+  - <carbon-logo-github /> [xwmx/nb](https://github.com/xwmx/nb)
+  - <carbon-logo-github /> [mozumasu/nb.nvim](https://github.com/mozumasu/nb.nvim)
+
+</div>
+
+<div class="grid">
+
+```bash
+tabnote() {
+  tabctl list | fzf --multi |
+  while IFS=$'\t' read -r id title url; do
+    buku --nostdin -a "$url" tab-archive \
+      --title "$title"
+    # ページ本文をClaudeで要約
+    summary=$(curl -sL "$url" |
+      sed 's/<[^>]*>//g' | claude -p "要約して")
+    # 要約に失敗したらタブを閉じずに残す
+    [ -n "$summary" ] || continue
+    # 要約をnbにメモとして保存
+    nb tab-archive:add --title "$title" \
+      --content "$summary" < /dev/null
+    tabctl close "$id"
+  done
+}
+```
+
+</div>
+
+</div>
+
+<div v-click class="mt-10 text-xl font-black text-red-500 text-center">
+
+  さっと読みたいとき、ネットないけど読みたいときに便利！！
+
+</div>
+
+---
+
