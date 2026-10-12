@@ -88,7 +88,7 @@ layout: none
 
 ---
 
-<div class="text-3xl font-black">ブラウザ管理からローカル管理への移行</div>
+<div class="text-3xl font-black">ブラウザ管理からターミナル管理へ移行</div>
 
 <div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
 
@@ -110,7 +110,7 @@ layout: none
 
 <div v-click class="mt-10 text-xl font-black text-red-500 text-center">
 
-  まずはブラウザから脱出！ターミナルによるブックマーク管理へ！！
+  これで面倒なブラウザ操作とはおさらば！！
 
 </div>
 
