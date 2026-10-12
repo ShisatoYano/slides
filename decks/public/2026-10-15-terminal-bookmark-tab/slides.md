@@ -56,9 +56,9 @@ layout: none
 
 <div class="text-3xl font-black">ブックマークが増えるとつらみも増える</div>
 
-<div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
+<div class="mt-10 grid grid-cols-[auto_1fr] gap-8 items-start">
 
-<div class="text-base whitespace-nowrap">
+<div class="text-lg whitespace-nowrap">
 
 <v-clicks>
 
@@ -80,7 +80,7 @@ layout: none
   
 </div>
 
-<div v-click class="mt-10 text-xl font-black text-red-500 text-center">
+<div v-click class="absolute bottom-12 inset-x-0 text-xl font-black text-red-500 text-center">
 
   ターミナル+CLIを駆使してそんなつらみから開放されよう！！
 
