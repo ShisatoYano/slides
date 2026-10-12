@@ -90,9 +90,9 @@ layout: none
 
 <div class="text-3xl font-black">ブラウザ管理からターミナル管理へ移行</div>
 
-<div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
+<div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-start">
 
-<div v-click class="text-base whitespace-nowrap">
+<div v-click class="text-lg whitespace-nowrap">
 
 - buku
   - ローカルのDBでブックマークを管理できるCLIツール
@@ -108,7 +108,7 @@ layout: none
 
 </div>
 
-<div v-click class="mt-10 text-xl font-black text-red-500 text-center">
+<div v-click class="absolute bottom-12 inset-x-0 text-xl font-black text-red-500 text-center">
 
   これで面倒なブラウザ操作とはおさらば！！
 
