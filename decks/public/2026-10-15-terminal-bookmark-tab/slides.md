@@ -56,7 +56,7 @@ layout: none
 
 <div class="text-3xl font-black">ブックマークが増えるとつらみも増える</div>
 
-<div class="mt-10 grid grid-cols-[auto_1fr] gap-8 items-start">
+<div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-start">
 
 <div class="text-lg whitespace-nowrap">
 
