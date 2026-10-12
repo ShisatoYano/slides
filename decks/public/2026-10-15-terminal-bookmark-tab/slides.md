@@ -88,14 +88,15 @@ layout: none
 
 ---
 
-<div class="text-3xl font-black">とりまターミナルでブックマーク管理</div>
+<div class="text-3xl font-black">ブラウザ管理からローカル管理への移行</div>
 
 <div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
 
-<div class="text-base whitespace-nowrap">
+<div v-click class="text-base whitespace-nowrap">
 
 - buku
   - ローカルのDBでブックマークを管理できるCLIツール
+  - ターミナルからの追加、削除、編集が可能になる
   - mdやhtml形式でのインポート/エクスポートも可能
   - <carbon-logo-github /> [jarun/buku](https://github.com/jarun/buku)
 
@@ -109,7 +110,7 @@ layout: none
 
 <div v-click class="mt-10 text-xl font-black text-red-500 text-center">
 
-  ブックマークバーが散らかる心配なし！！
+  まずはブラウザから脱出！ターミナルによるブックマーク管理へ！！
 
 </div>
 
