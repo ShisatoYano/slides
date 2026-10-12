@@ -288,4 +288,3 @@ layout: center
   <div class="mt-6 text-xl font-bold text-red-400"> あなたのブックマーク・タブ管理が少しでも快適になりますよう🙏 </div>
 </div>
 
----
