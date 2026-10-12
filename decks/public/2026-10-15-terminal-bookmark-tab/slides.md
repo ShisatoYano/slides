@@ -116,11 +116,11 @@ layout: none
 
 ---
 
-<div class="text-3xl font-black">大量ブックマークからぱぱっと検索</div>
+<div class="text-3xl font-black">大量ブックマークからでもさくっと検索</div>
 
 <div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
 
-<div class="text-base whitespace-nowrap">
+<div v-click class="text-base whitespace-nowrap">
 
 - bukuのタグ付け機能
   - ジャンルなどによってタグ付け
@@ -133,7 +133,7 @@ layout: none
 
 </div>
 
-<div class="grid">
+<div v-click class="grid">
 
 ```bash
 # タグを付けて追加
@@ -156,7 +156,7 @@ bb
 
 <div v-click class="mt-10 text-xl font-black text-red-500 text-center">
 
-  これならいくらブックマークが増えても大丈夫(なはず)！！
+  これで検索に手こずる心配なし！心置きなくブックマークを増やしましょう！！
 
 </div>
 
