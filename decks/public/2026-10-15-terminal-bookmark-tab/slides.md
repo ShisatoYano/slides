@@ -54,7 +54,7 @@ layout: none
 
 ---
 
-<div class="text-3xl font-black">こんなお悩みありませんか？</div>
+<div class="text-3xl font-black">ブックマークが増えるとつらみも増える</div>
 
 <div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
 
@@ -62,10 +62,10 @@ layout: none
 
 <v-clicks>
 
-- ついつい衝動保存してブックマーク増やしがち
-- 捨てたいけどまた見たくなるかもしれないし
-- 探すのめんどいからタブで開きっぱにしがち
-- 整理整頓したいけどターミナルから出たくない
+- ぐちゃったブックマークが視界に入って落ち着かない
+- 見たいものを探し出すのが面倒になる
+- タブで開きっぱにしてさらにカオスになる
+- ブラウザでちまちま削除・整理するのもまた面倒
 
 </v-clicks>
 
@@ -82,7 +82,7 @@ layout: none
 
 <div v-click class="mt-10 text-xl font-black text-red-500 text-center">
 
-  それ、ターミナル+CLIでまとめて解決できちゃうんです！！
+  ターミナル+CLIを駆使してそんなつらみから開放されよう！！
 
 </div>
 
