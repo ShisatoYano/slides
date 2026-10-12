@@ -286,6 +286,6 @@ layout: center
 
 <div class="text-center">
   <div class="text-5xl font-black text-sky-700">ご清聴ありがとうございました </div>
-  <div class="mt-6 text-xl font-bold text-red-400"> あなたのブックマーク・タブ管理が少しでも快適になりますよう🙏 </div>
+  <div class="mt-6 text-xl font-bold text-red-400"> あなたのブックマーク・タブ管理が少しでも快適になりますように🙏 </div>
 </div>
 
