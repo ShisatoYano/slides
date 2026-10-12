@@ -162,25 +162,25 @@ bb
 
 ---
 
-<div class="text-3xl font-black">保存操作もターミナルからやっちゃおう</div>
+<div class="text-3xl font-black">ターミナルからタブを操ろう</div>
 
 <div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
 
-<div class="text-base whitespace-nowrap">
+<div v-click class="text-base whitespace-nowrap">
 
 - tabctl
-  - ブラウザ上のタブをターミナルから操作するためのCLIツール
+  - ブラウザのタブをターミナルから操作するためのCLIツール
   - タブの一覧取得、切り替え、オープン/クローズ
   - <carbon-logo-github /> [slastra/tabctl](https://github.com/slastra/tabctl)
   - <ph-google-chrome-logo /> [Chrome拡張機能](https://chromewebstore.google.com/detail/tabctl/baomblllgemcgbignhpbipgiofmjdhpn)も別途インストールが必要
 - buku, fzfとの連携
   - ターミナルから指定したタブのページをブックマーク保存
-  - 保存から閉じるまでを自動化できるのでタブが散らからない
+  - 保存から閉じるまでを自動化できる
   - 複数タブも同時に保存できる
 
 </div>
 
-<div class="grid">
+<div v-click class="grid">
 
 ```bash
 tabarchive() {
@@ -202,7 +202,7 @@ tabarchive() {
 
 <div v-click class="mt-10 text-xl font-black text-red-500 text-center">
 
-  晴れてブラウザでのブックマーク・タブ管理から卒業！！
+  基本はここまで！おまけで応用編も紹介します！！
 
 </div>
 
@@ -212,20 +212,20 @@ tabarchive() {
 
 <div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
 
-<div class="text-base whitespace-nowrap">
+<div v-click class="text-base whitespace-nowrap">
 
 - Claude Codeとの連携
   - ブックマーク保存時にページ本文を取得
   - 「要約して」のプロンプトと一緒にClaudeに投げる
 - nbとの連携
-  - マークダウンでメモを取れるCLIツール
+  - マークダウンでメモ作成、管理ができるCLIツール
   - Claudeが生成した要約をnbでメモとして保存
   - <carbon-logo-github /> [xwmx/nb](https://github.com/xwmx/nb)
   - <carbon-logo-github /> [mozumasu/nb.nvim](https://github.com/mozumasu/nb.nvim)
 
 </div>
 
-<div class="grid">
+<div v-click class="grid">
 
 ```bash
 tabnote() {
