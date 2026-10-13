@@ -164,9 +164,9 @@ bb
 
 <div class="text-3xl font-black">ターミナルからタブを操ろう</div>
 
-<div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
+<div class="mt-10 grid grid-cols-[auto_1fr] gap-8 items-start">
 
-<div v-click class="text-base whitespace-nowrap">
+<div v-click class="text-lg whitespace-nowrap">
 
 - tabctl
   - ブラウザのタブをターミナルから操作するためのCLIツール
@@ -200,7 +200,7 @@ tabarchive() {
 
 </div>
 
-<div v-click class="mt-10 text-xl font-black text-red-500 text-center">
+<div v-click class="absolute bottom-12 inset-x-0 text-xl font-black text-red-500 text-center">
 
   基本はここまで！おまけで応用編も紹介します！！
 
