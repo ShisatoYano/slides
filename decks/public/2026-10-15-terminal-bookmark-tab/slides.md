@@ -210,9 +210,9 @@ tabarchive() {
 
 <div class="text-3xl font-black">保存時に要約メモを作る</div>
 
-<div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
+<div class="mt-10 grid grid-cols-[auto_1fr] gap-8 items-start">
 
-<div v-click class="text-base whitespace-nowrap">
+<div v-click class="text-lg whitespace-nowrap">
 
 - Claude Codeとの連携
   - ブックマーク保存時にページ本文を取得
@@ -250,7 +250,7 @@ tabnote() {
 
 </div>
 
-<div v-click class="mt-10 text-xl font-black text-red-500 text-center">
+<div v-click class="absolute bottom-12 inset-x-0 text-xl font-black text-red-500 text-center">
 
   さっと読みたいとき、ネットないけど読みたいときに便利！！
 
@@ -260,20 +260,20 @@ tabnote() {
 
 <div class="text-3xl font-black">設定はこちら</div>
 
-<div class="mt-10 grid grid-cols-[2fr_3fr] gap-6 items-center">
+<div class="mt-16 grid grid-cols-[2fr_3fr] gap-10 items-center">
 
-<div class="text-base whitespace-nowrap">
+<div class="text-lg leading-loose">
 
-- 同じ環境設定がスクリプト1発で自動構築できます
+- スクリプト1発で自動環境構築
 - Linux(Ubuntu)でのみ動作確認済み
-- 不具合とか改善アイディアあったらいつでもIssue/PRください！
+- Issue/PR大歓迎！
 
 </div>
 
 <div class="grid">
 
 <a href="https://github.com/ShisatoYano/dotfiles" target="_blank" class="!border-none">
-  <img src="https://opengraph.githubassets.com/1/ShisatoYano/dotfiles" class="w-120 rounded-lg shadow" />
+  <img src="https://opengraph.githubassets.com/1/ShisatoYano/dotfiles" class="w-full rounded-lg shadow-lg" />
 </a>
 
 </div>
