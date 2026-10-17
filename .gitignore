@@ -1,7 +1,8 @@
 # dotfilesへのシンボリックリンク。リンク先がこのマシン固有の絶対パスなので追跡しない。
 # 末尾スラッシュを付けるとディレクトリにしかマッチせず、シンボリックリンクが素通りする
 node_modules
-package.json
+# 先頭スラッシュでリポジトリ直下に限定する。付けないと addons/ 配下のアドオン自身の package.json まで無視される
+/package.json
 
 # Slidevが生成するもの
 dist/

@@ -1,0 +1,9 @@
+{
+  "name": "slidev-addon-yano",
+  "private": true,
+  "version": "0.0.0",
+  "keywords": ["slidev-addon"],
+  "engines": {
+    "slidev": ">=53.0.0"
+  }
+}
