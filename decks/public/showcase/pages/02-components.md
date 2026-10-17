@@ -85,3 +85,20 @@ done
 書き方: <AnnotatedCode> の内側を空行で挟み、コードブロックの後に <CodeRegion :line="行番号" text="探す文字列" label="ラベル" /> を並べる。
 text に " を含むときは属性を ' で囲む。上のラベルが上の行に重なるなら label-position="below" にする。
 -->
+
+---
+clicks: 4
+---
+
+## データで動く図: クリックに合わせて状態を進める
+
+<TabArchiveFlow :stage="$clicks" />
+
+<!--
+使う場面: 発表の山場で、操作の流れをスクショの切り替えではなく動きで見せたいとき。手間がかかるので1発表に1〜2枚まで。
+作り方:
+1. frontmatter に clicks: <段階の数> を書き、部品に :stage="$clicks" を渡す
+2. 部品側は「何番目の段階で何が起きるか」を定数とデータで持ち、stage との比較だけで見た目を切り替える
+3. 動きは CSS の transition に任せる(幅を縮める・色を変える・不透明度を変える)
+ターミナルの枠はアドオンの <TerminalWindow>、図の中身はデッキの components/ に置く。
+-->

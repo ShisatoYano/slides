@@ -48,5 +48,6 @@
 | 今日のゴールなどラベル付きの要点 | `<Callout label="...">` |
 | 出典・参考リンク | `<Ref>`(内側を空行で挟むと中のMarkdownが解釈される) |
 | コードの行の中の一部(引数1つなど) | `<AnnotatedCode>` + `<CodeRegion :line text label>`(行全体なら行ハイライトで足りるので使わない) |
+| 操作の流れ(発表の山場、1発表に1〜2枚まで) | frontmatterに `clicks: N`、デッキの `components/` に置いた部品に `:stage="$clicks"` を渡す。ターミナル画面の枠はアドオンの `<TerminalWindow>` |
 
 - 画像は各デッキの `images/` に置く。他のデッキの画像を相対パスで参照すると表示されない
