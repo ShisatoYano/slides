@@ -58,3 +58,30 @@ layout: section
 使う場面: 引用・他者の画像・ツールの説明を載せたスライド。書籍ならページ番号、写真ならライセンスも書く。
 書き方: <Ref> と </Ref> の内側を空行で挟むと、中のMarkdown(リンクなど)が解釈される。
 -->
+
+---
+
+## AnnotatedCode / CodeRegion: コードの一部に注釈を付ける
+
+<AnnotatedCode class="mt-12">
+
+```bash
+tabctl list | fzf --multi |
+while IFS=$'\t' read -r id title url; do
+  buku --nostdin -a "$url" tab-archive --title "$title"
+  tabctl close "$id"
+done
+```
+
+<CodeRegion v-click :line="1" text="fzf --multi" label="Tabで複数選択" />
+<CodeRegion v-click :line="3" text="tab-archive" label="付けるタグ" color="#ef4444" />
+<CodeRegion v-click :line="3" text='--title "$title"' label="タブのタイトルをそのまま使う" color="#16a34a" label-position="below" />
+<CodeRegion v-click :line="4" text='tabctl close "$id"' label="保存したタブを閉じる" color="#9333ea" label-position="below" />
+
+</AnnotatedCode>
+
+<!--
+使う場面: 行の中の引数1つを指したいとき。行全体を指すだけなら標準の行ハイライトで足りる。
+書き方: <AnnotatedCode> の内側を空行で挟み、コードブロックの後に <CodeRegion :line="行番号" text="探す文字列" label="ラベル" /> を並べる。
+text に " を含むときは属性を ' で囲む。上のラベルが上の行に重なるなら label-position="below" にする。
+-->
