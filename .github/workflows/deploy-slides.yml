@@ -1,0 +1,66 @@
+name: Deploy slides
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - decks/public/**
+      - addons/**
+      - scripts/build-pages.sh
+      - .github/workflows/deploy-slides.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # ビルドだけならブラウザは不要(playwright-chromium はPDF書き出し用)
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+    steps:
+      - uses: actions/checkout@v4
+
+      # 依存は dotfiles/slidev で一元管理していて、このリポジトリには package.json を置いていない
+      - uses: actions/checkout@v4
+        with:
+          repository: ShisatoYano/dotfiles
+          path: .dotfiles
+          sparse-checkout: slidev
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: .dotfiles/slidev/package-lock.json
+
+      - run: npm ci
+        working-directory: .dotfiles/slidev
+
+      - name: Link dependencies like the local setup
+        run: |
+          ln -s .dotfiles/slidev/package.json package.json
+          ln -s .dotfiles/slidev/node_modules node_modules
+
+      - run: sh scripts/build-pages.sh
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
