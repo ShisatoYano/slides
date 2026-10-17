@@ -6,6 +6,7 @@
 
 - 全デッキ共通の部品・レイアウトは自作アドオン `addons/slidev-addon-yano/` に置き、各デッキのheadmatterで `addons: [../../addons/slidev-addon-yano]` と読み込む
 - 新しい部品や記法は、まず `decks/public/showcase/` で試し、使い方の見本として残す(イベント用ではないので日付を付けない)
+- `decks/public/` 配下のデッキは、`main` へのpushで全部 GitHub Pages(`https://shisatoyano.github.io/slides/<デッキ名>/`)に公開される。公開前の資料は `decks/private/` に置く
 
 ## 作り始める前に確認すること
 
