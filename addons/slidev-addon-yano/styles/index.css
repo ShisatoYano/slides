@@ -6,13 +6,14 @@
   --yano-emphasis: #ef4444;
   --yano-muted: #6b7280;
 
-  /* ターミナルの配色。TerminalWindow と、その中に描く図で共有する */
-  --yano-term-bg: #1e1e2e;
-  --yano-term-bar: #2a2a3c;
-  --yano-term-fg: #e5e7eb;
-  --yano-term-dim: #6c7086;
-  --yano-term-green: #a6e3a1;
-  --yano-term-blue: #89b4fa;
-  --yano-term-red: #f38ba8;
-  --yano-term-yellow: #f9e2af;
+  /* ターミナルの配色。TerminalWindow と、その中に描く図で共有する。
+     本文は普段使いの WezTerm と同じ Solarized Osaka、バーは Ubuntu(Yaru)のダークなヘッダーバー */
+  --yano-term-bg: #001419;
+  --yano-term-bar: #303030;
+  --yano-term-fg: #839395;
+  --yano-term-dim: #586e75;
+  --yano-term-green: #849900;
+  --yano-term-blue: #268bd3;
+  --yano-term-red: #db302d;
+  --yano-term-yellow: #b28500;
 }

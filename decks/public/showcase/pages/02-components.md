@@ -44,7 +44,7 @@ layout: section
 
 <!--
 定義は addons/slidev-addon-yano/styles/index.css。部品の中では color: var(--yano-accent) のように使い、16進数で直接書かない。
-macOSのタイトルバーの丸など、配色と関係なく変えない色は部品の中に直接書いてよい。
+ウィンドウのボタンの色(Ubuntuの閉じるボタンのオレンジなど)のように、配色と関係なく変えない色は部品の中に直接書いてよい。
 -->
 
 ---
