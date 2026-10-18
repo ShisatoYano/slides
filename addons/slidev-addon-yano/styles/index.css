@@ -5,6 +5,8 @@
   --yano-accent-soft: #f0f9ff;
   --yano-emphasis: #ef4444;
   --yano-muted: #6b7280;
+  /* 白い文字を乗せる背景(CodeRegion のラベルなど)。ダークモードで accent を明るくしても白い文字が読めるよう分けている */
+  --yano-label: #0369a1;
 
   /* ターミナルの配色。TerminalWindow と、その中に描く図で共有する。
      本文は普段使いの WezTerm と同じ Solarized Osaka、バーは Ubuntu(Yaru)のダークなヘッダーバー */
@@ -16,4 +18,13 @@
   --yano-term-blue: #268bd3;
   --yano-term-red: #db302d;
   --yano-term-yellow: #b28500;
+}
+
+/* Slidevのダークモード(d キー)。ターミナルはもともと暗いので変えない */
+html.dark {
+  --yano-accent: #38bdf8;
+  --yano-accent-soft: #082f49;
+  --yano-emphasis: #f87171;
+  --yano-muted: #9ca3af;
+  --yano-label: #0284c7;
 }

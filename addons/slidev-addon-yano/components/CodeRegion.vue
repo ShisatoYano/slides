@@ -1,4 +1,4 @@
-<!-- <AnnotatedCode> 内のコードの line 行目から text を探し、色付きの枠とラベルを重ねる -->
+<!-- <AnnotatedCode> 内のコードの line 行目から occurrence 個目の text を探し、色付きの枠とラベルを重ねる -->
 <script setup lang="ts">
 import { inject, onMounted, onUnmounted, ref } from 'vue'
 import { annotatedCodeRootKey } from '../utils/annotated-code'
@@ -7,14 +7,16 @@ const {
   line,
   text,
   label = '',
-  color = 'var(--yano-accent)',
+  color = 'var(--yano-label)',
   labelPosition = 'above',
+  occurrence = 1,
 } = defineProps<{
   line: number
   text: string
   label?: string
   color?: string
   labelPosition?: 'above' | 'below'
+  occurrence?: number
 }>()
 
 const root = inject(annotatedCodeRootKey)
@@ -27,9 +29,13 @@ function findRange(lineEl: Element): Range | undefined {
   while (walker.nextNode())
     nodes.push(walker.currentNode as Text)
 
-  const start = nodes.map(n => n.data).join('').indexOf(text)
-  if (start < 0)
-    return undefined
+  const joined = nodes.map(n => n.data).join('')
+  let start = -1
+  for (let i = 0; i < occurrence; i++) {
+    start = joined.indexOf(text, start + 1)
+    if (start < 0)
+      return undefined
+  }
 
   const range = document.createRange()
   let offset = 0
@@ -54,7 +60,7 @@ function measure() {
 
   const range = findRange(lineEl)
   if (!range) {
-    console.warn(`[CodeRegion] "${text}" が ${line} 行目に見つからない`)
+    console.warn(`[CodeRegion] "${text}" の ${occurrence} 個目が ${line} 行目に見つからない`)
     return
   }
 

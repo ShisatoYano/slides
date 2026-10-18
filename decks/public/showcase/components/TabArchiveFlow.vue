@@ -110,6 +110,12 @@ const isClosed = (t: typeof tabs[number]) => stage >= CLOSE && t.pick
   transition: flex-grow 0.5s, max-width 0.5s, padding 0.5s, opacity 0.4s, background 0.3s;
 }
 
+/* 明るいブラウザを真似ているので、ダークモードでもタブの文字は暗いままにする */
+/* :global() で囲むとVueがセレクタ全体をグローバルにして .tab を落とすので使わない(scopedは最後の .tab だけに印を付ける) */
+html.dark .tab {
+  color: #1f2937;
+}
+
 .tab.is-picked {
   background: #dbeafe;
 }

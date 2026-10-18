@@ -43,8 +43,8 @@ layout: section
 </div>
 
 <!--
-定義は addons/slidev-addon-yano/styles/index.css。部品の中では color: var(--yano-accent) のように使い、16進数で直接書かない。
-ウィンドウのボタンの色(Ubuntuの閉じるボタンのオレンジなど)のように、配色と関係なく変えない色は部品の中に直接書いてよい。
+書き方: 部品の中で color: var(--yano-accent) のように使う。定義は addons/slidev-addon-yano/styles/index.css。
+注意: ダークモード(d キー)の値は同じファイルの html.dark に書く。部品側で dark 用のセレクタを書くときは :global() を使わず html.dark .xxx と書く(:global() だとVueがセレクタ全体をグローバルにする)。
 -->
 
 ---
@@ -57,8 +57,8 @@ layout: section
 <KeyMessage v-click>これで検索に手こずる心配なし！</KeyMessage>
 
 <!--
-使う場面: そのスライドで一番伝えたい一文。1スライドに1つまで。
-書き方: <KeyMessage v-click>一文</KeyMessage>。下部中央に固定されるので、本文が下まで伸びるスライドでは重なりに注意する。
+書き方: <KeyMessage v-click>一文</KeyMessage>
+注意: 下部中央に固定されるので、本文が下まで伸びるスライドでは重なる。
 -->
 
 ---
@@ -69,7 +69,7 @@ layout: section
   <img src="../images/icon.jpeg" class="w-40 h-40 rounded-full" />
   <div>
     <div class="text-2xl font-black">Shisato Yano</div>
-    <div class="mt-2 text-gray-600">車や船の自動運転システムを作るソフトウェアエンジニア</div>
+    <div class="mt-2 text-gray-600 dark:text-gray-400">車や船の自動運転システムを作るソフトウェアエンジニア</div>
   </div>
 </div>
 
@@ -78,8 +78,7 @@ layout: section
 </Callout>
 
 <!--
-使う場面: LTで「今日伝えたいこと」に1枚を割けないとき、自己紹介と同じスライドに置く。15分以上の発表なら独立したスライドにしてよい。
-書き方: <Callout label="ラベル">本文</Callout>
+書き方: <Callout label="ラベル">本文</Callout>。label は文字列としてそのまま表示される(Markdownは効かない)。
 -->
 
 ---
@@ -96,7 +95,6 @@ layout: section
 </Ref>
 
 <!--
-使う場面: 引用・他者の画像・ツールの説明を載せたスライド。書籍ならページ番号、写真ならライセンスも書く。
 書き方: <Ref> と </Ref> の内側を空行で挟むと、中のMarkdown(リンクなど)が解釈される。
 -->
 
@@ -122,9 +120,9 @@ done
 </AnnotatedCode>
 
 <!--
-使う場面: 行の中の引数1つを指したいとき。行全体を指すだけなら標準の行ハイライトで足りる。
 書き方: <AnnotatedCode> の内側を空行で挟み、コードブロックの後に <CodeRegion :line="行番号" text="探す文字列" label="ラベル" /> を並べる。
-text に " を含むときは属性を ' で囲む。上のラベルが上の行に重なるなら label-position="below" にする。
+同じ行に同じ文字列が複数あるときは :occurrence="2" で何個目かを指定する。
+注意: text に " を含むときは属性を ' で囲む。上のラベルが上の行に重なるなら label-position="below" にする。見つからないと枠は出ず、コンソールに警告が出る。
 -->
 
 ---
@@ -136,10 +134,8 @@ clicks: 4
 <TabArchiveFlow :stage="$clicks" />
 
 <!--
-使う場面: 発表の山場で、操作の流れをスクショの切り替えではなく動きで見せたいとき。手間がかかるので1発表に1〜2枚まで。
 作り方:
 1. frontmatter に clicks: <段階の数> を書き、部品に :stage="$clicks" を渡す
 2. 部品側は「何番目の段階で何が起きるか」を定数とデータで持ち、stage との比較だけで見た目を切り替える
 3. 動きは CSS の transition に任せる(幅を縮める・色を変える・不透明度を変える)
-ターミナルの枠はアドオンの <TerminalWindow>、図の中身はデッキの components/ に置く。
 -->
