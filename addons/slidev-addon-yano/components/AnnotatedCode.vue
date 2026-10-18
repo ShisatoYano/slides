@@ -18,6 +18,7 @@ provide(annotatedCodeRootKey, root)
    Slidevはこの変数を !important で適用するので、line-height を直接指定しても効かない */
 .annotated-code {
   position: relative;
-  --slidev-code-line-height: 36px;
+  /* 使う側で --slidev-code-font-size を変えても行間が追従するよう、文字サイズの3倍にする(標準の12pxなら36px) */
+  --slidev-code-line-height: calc(var(--slidev-code-font-size, 12px) * 3);
 }
 </style>

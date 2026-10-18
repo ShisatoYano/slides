@@ -122,6 +122,7 @@ done
 <!--
 書き方: <AnnotatedCode> の内側を空行で挟み、コードブロックの後に <CodeRegion :line="行番号" text="探す文字列" label="ラベル" /> を並べる。
 同じ行に同じ文字列が複数あるときは :occurrence="2" で何個目かを指定する。
+コードを大きく見せたいときは <AnnotatedCode style="--slidev-code-font-size: 16px"> のように指定する(行間は文字サイズの3倍で追従する)。
 注意: text に " を含むときは属性を ' で囲む。上のラベルが上の行に重なるなら label-position="below" にする。見つからないと枠は出ず、コンソールに警告が出る。
 -->
 
