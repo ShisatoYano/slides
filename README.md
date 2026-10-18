@@ -1,7 +1,7 @@
 # slides
 
 オープンイベントでの発表資料置き場([Slidev](https://sli.dev/))。
-`main` へのpushで [GitHub Pages](https://shisatoyano.github.io/slides/) に公開される。
+headmatterに `publish: true` を書いたデッキは、`main` へのpushで [GitHub Pages](https://shisatoyano.github.io/slides/) にも公開される。
 
 ## 発表資料一覧
 

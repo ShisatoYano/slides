@@ -1,5 +1,5 @@
 #!/bin/sh
-# decks/public/ のデッキをすべてビルドし、GitHub Pages に置く dist/ を作る。
+# decks/public/ のうち headmatter に publish: true があるデッキだけをビルドし、GitHub Pages に置く dist/ を作る。
 # 依存の解決がリポジトリ直下で通るため、必ずリポジトリ直下で実行する
 set -eu
 
@@ -20,9 +20,13 @@ decks=$(
 )
 
 items=""
+count=0
 for dir in $decks; do
   [ -f "$dir/slides.md" ] || continue
+  # 書き忘れたサンプルが公開されないよう、明示したデッキだけを対象にする
+  sed -n '2,/^---$/p' "$dir/slides.md" | grep -qE '^publish: *true *$' || continue
   deck=$(basename "$dir")
+  count=$((count + 1))
 
   # GitHub Pagesはどのパスでもアプリ本体を返す設定ができず、/<デッキ>/5 を直接開くと404になるため hash モードにする
   npx slidev build "$dir/slides.md" --base "$base_path/$deck/" --router-mode hash --out "$out/$deck"
@@ -31,6 +35,11 @@ for dir in $decks; do
   items="$items    <li><a href=\"./$deck/\">${title:-$deck}</a><span>$deck</span></li>
 "
 done
+
+if [ "$count" -eq 0 ]; then
+  echo "Error: publish: true のデッキがない" >&2
+  exit 1
+fi
 
 cat > "$out/index.html" <<HTML
 <!doctype html>

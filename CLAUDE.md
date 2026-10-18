@@ -7,7 +7,7 @@
 - 全デッキ共通の部品・レイアウトは自作アドオン `addons/slidev-addon-yano/` に置き、各デッキのheadmatterで `addons: [../../addons/slidev-addon-yano]` と読み込む
 - 新しい部品や記法は、まず `decks/public/showcase/` で試し、使い方の見本として残す(イベント用ではないので日付を付けない)
 - `addons/` やデッキの `components/` に `.vue` を新しく追加したら、開発サーバを再起動する。部品はサーバ起動時に登録されるため、起動中に追加した部品はタグの中身だけが表示され、props(`label` など)が出ない
-- `decks/public/` 配下のデッキは、`main` へのpushで全部 GitHub Pages(`https://shisatoyano.github.io/slides/<デッキ名>/`)に公開される。公開前の資料は `decks/private/` に置く
+- `decks/public/` はGitで公開してよい資料の置き場。そのうちheadmatterに `publish: true` を書いたデッキだけが、`main` へのpushで GitHub Pages(`https://shisatoyano.github.io/slides/<デッキ名>/`)にも公開される。サンプルや見本には書かない
 
 ## 作り始める前に確認すること
 

@@ -1,6 +1,8 @@
 ---
 theme: default
 title: ブックマーク・タブを減らせない人にすすめたい, ターミナル+CLIによる整理整頓術
+# GitHub Pages に公開する(scripts/build-pages.sh が見る)
+publish: true
 # 日本語がGoogle Fonts側の欧文フォントにフォールバックして崩れないよう、和文フォントを明示する
 fonts:
   sans: Noto Sans JP
