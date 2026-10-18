@@ -1,0 +1,4 @@
+/* スライドの見出しは ## で書き、発表時の太字の見た目(font-black)に揃える */
+.slidev-layout h2 {
+  font-weight: 900;
+}
