@@ -9,6 +9,11 @@ fonts:
   serif: Noto Serif JP
   mono: JetBrains Mono
   weights: '400,700,900'
+# ~/slides/addons の自作部品。Slidevはデッキのフォルダの「親」を起点に解決するため、../ は2つで ~/slides に届く
+addons:
+  - ../../addons/slidev-addon-yano
+# 先読みはビルドで名前が変わる前の画像パスを使い404になるだけなので止める
+preloadImages: false
 transition: slide-left
 mdc: true
 layout: none
@@ -82,11 +87,11 @@ layout: none
   
 </div>
 
-<div v-click class="absolute bottom-12 inset-x-0 text-xl font-black text-red-500 text-center">
+<KeyMessage v-click>
 
   ターミナル+CLIを駆使してそんなつらみから開放されよう！！
 
-</div>
+</KeyMessage>
 
 ---
 
@@ -110,11 +115,11 @@ layout: none
 
 </div>
 
-<div v-click class="absolute bottom-12 inset-x-0 text-xl font-black text-red-500 text-center">
+<KeyMessage v-click>
 
   これで面倒なブラウザ操作とはおさらば！！
 
-</div>
+</KeyMessage>
 
 ---
 
@@ -156,11 +161,11 @@ bb
 
 </div>
 
-<div v-click class="absolute bottom-12 inset-x-0 text-xl font-black text-red-500 text-center">
+<KeyMessage v-click>
 
   これで検索に手こずる心配なし！心置きなくブックマークを増やしましょう！！
 
-</div>
+</KeyMessage>
 
 ---
 
@@ -202,11 +207,11 @@ tabarchive() {
 
 </div>
 
-<div v-click class="absolute bottom-12 inset-x-0 text-xl font-black text-red-500 text-center">
+<KeyMessage v-click>
 
   基本はここまで！おまけで応用編も紹介します！！
 
-</div>
+</KeyMessage>
 
 ---
 
@@ -252,11 +257,11 @@ tabnote() {
 
 </div>
 
-<div v-click class="absolute bottom-12 inset-x-0 text-xl font-black text-red-500 text-center">
+<KeyMessage v-click>
 
   さっと読みたいとき、ネットないけど読みたいときに便利！！
 
-</div>
+</KeyMessage>
 
 ---
 
@@ -275,7 +280,7 @@ tabnote() {
 <div class="grid">
 
 <a href="https://github.com/ShisatoYano/dotfiles" target="_blank" class="!border-none">
-  <img src="https://opengraph.githubassets.com/1/ShisatoYano/dotfiles" class="w-full rounded-lg shadow-lg" />
+  <img src="./images/dotfiles_card.png" class="w-full rounded-lg shadow-lg" />
 </a>
 
 </div>
