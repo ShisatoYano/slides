@@ -53,3 +53,4 @@
 | 操作の流れ(発表の山場、1発表に1〜2枚まで) | frontmatterに `clicks: N`、デッキの `components/` に置いた部品に `:stage="$clicks"` を渡す。ターミナル画面の枠はアドオンの `<TerminalWindow>` |
 
 - 画像は各デッキの `images/` に置く。他のデッキの画像を相対パスで参照すると表示されない
+- 外部サーバの画像(GitHubのリポジトリカード `opengraph.githubassets.com` など)も、URLを直接参照せずダウンロードして `images/` に置く。レート制限や会場の回線不調で表示されないことがあるため
