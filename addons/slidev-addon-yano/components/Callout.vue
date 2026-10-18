@@ -14,16 +14,16 @@ const { label } = defineProps<{ label: string }>()
 
 <style scoped>
 .callout {
-  border-left: 4px solid #0369a1;
+  border-left: 4px solid var(--yano-accent);
   border-radius: 0.25rem;
-  background: #f0f9ff;
+  background: var(--yano-accent-soft);
   padding: 0.75rem 1.25rem;
 }
 
 .callout-label {
   font-size: 0.875rem;
   font-weight: 700;
-  color: #0369a1;
+  color: var(--yano-accent);
 }
 
 .callout-body {

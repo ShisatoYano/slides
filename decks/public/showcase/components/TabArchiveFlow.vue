@@ -128,7 +128,7 @@ const isClosed = (t: typeof tabs[number]) => stage >= CLOSE && t.pick
 
 .prompt {
   margin-right: 0.4rem;
-  color: #a6e3a1;
+  color: var(--yano-term-green);
 }
 
 .cursor {
@@ -136,7 +136,7 @@ const isClosed = (t: typeof tabs[number]) => stage >= CLOSE && t.pick
   width: 0.5rem;
   height: 1em;
   vertical-align: text-bottom;
-  background: #e5e7eb;
+  background: var(--yano-term-fg);
 }
 
 .row {
@@ -144,31 +144,31 @@ const isClosed = (t: typeof tabs[number]) => stage >= CLOSE && t.pick
 }
 
 .row.is-picked {
-  background: rgb(137 180 250 / 0.2);
+  background: color-mix(in srgb, var(--yano-term-blue) 20%, transparent);
 }
 
 .mark {
   display: inline-block;
   width: 1rem;
-  color: #f38ba8;
+  color: var(--yano-term-red);
 }
 
 .fzf-prompt {
   margin-right: 0.6rem;
-  color: #f9e2af;
+  color: var(--yano-term-yellow);
 }
 
 .dim {
-  color: #6c7086;
+  color: var(--yano-term-dim);
 }
 
 .ok {
   margin-right: 0.4rem;
-  color: #a6e3a1;
+  color: var(--yano-term-green);
 }
 
 .tag {
-  color: #89b4fa;
+  color: var(--yano-term-blue);
 }
 
 .appear {
@@ -184,6 +184,6 @@ const isClosed = (t: typeof tabs[number]) => stage >= CLOSE && t.pick
   text-align: center;
   font-size: 1rem;
   font-weight: 700;
-  color: #0369a1;
+  color: var(--yano-accent);
 }
 </style>

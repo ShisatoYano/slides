@@ -8,6 +8,47 @@ layout: section
 
 ---
 
+## 配色: 部品の色はCSS変数で指定する
+
+<div class="mt-6 text-sm font-bold">デッキ全体の配色</div>
+<div class="mt-2 grid grid-cols-2 gap-4">
+  <div class="flex items-center gap-3">
+    <span class="w-8 h-8 rounded border border-gray-300" style="background: var(--yano-accent)" />
+    <div><code>--yano-accent</code><div class="text-xs opacity-70">見出し・枠・ラベル</div></div>
+  </div>
+  <div class="flex items-center gap-3">
+    <span class="w-8 h-8 rounded border border-gray-300" style="background: var(--yano-accent-soft)" />
+    <div><code>--yano-accent-soft</code><div class="text-xs opacity-70">囲み枠の背景</div></div>
+  </div>
+  <div class="flex items-center gap-3">
+    <span class="w-8 h-8 rounded border border-gray-300" style="background: var(--yano-emphasis)" />
+    <div><code>--yano-emphasis</code><div class="text-xs opacity-70">結論の強調</div></div>
+  </div>
+  <div class="flex items-center gap-3">
+    <span class="w-8 h-8 rounded border border-gray-300" style="background: var(--yano-muted)" />
+    <div><code>--yano-muted</code><div class="text-xs opacity-70">補足の文字</div></div>
+  </div>
+</div>
+
+<div class="mt-8 text-sm font-bold">ターミナルの配色</div>
+<div class="mt-2 grid grid-cols-2 gap-x-4 gap-y-2">
+  <div class="flex items-center gap-2"><span class="w-6 h-6 rounded border border-gray-300" style="background: var(--yano-term-bg)" /><code class="text-xs">--yano-term-bg</code></div>
+  <div class="flex items-center gap-2"><span class="w-6 h-6 rounded border border-gray-300" style="background: var(--yano-term-bar)" /><code class="text-xs">--yano-term-bar</code></div>
+  <div class="flex items-center gap-2"><span class="w-6 h-6 rounded border border-gray-300" style="background: var(--yano-term-fg)" /><code class="text-xs">--yano-term-fg</code></div>
+  <div class="flex items-center gap-2"><span class="w-6 h-6 rounded border border-gray-300" style="background: var(--yano-term-dim)" /><code class="text-xs">--yano-term-dim</code></div>
+  <div class="flex items-center gap-2"><span class="w-6 h-6 rounded border border-gray-300" style="background: var(--yano-term-green)" /><code class="text-xs">--yano-term-green</code></div>
+  <div class="flex items-center gap-2"><span class="w-6 h-6 rounded border border-gray-300" style="background: var(--yano-term-blue)" /><code class="text-xs">--yano-term-blue</code></div>
+  <div class="flex items-center gap-2"><span class="w-6 h-6 rounded border border-gray-300" style="background: var(--yano-term-red)" /><code class="text-xs">--yano-term-red</code></div>
+  <div class="flex items-center gap-2"><span class="w-6 h-6 rounded border border-gray-300" style="background: var(--yano-term-yellow)" /><code class="text-xs">--yano-term-yellow</code></div>
+</div>
+
+<!--
+定義は addons/slidev-addon-yano/styles/index.css。部品の中では color: var(--yano-accent) のように使い、16進数で直接書かない。
+macOSのタイトルバーの丸など、配色と関係なく変えない色は部品の中に直接書いてよい。
+-->
+
+---
+
 ## KeyMessage: スライドの結論を一文で置く
 
 - bukuでブックマークをターミナルから管理する

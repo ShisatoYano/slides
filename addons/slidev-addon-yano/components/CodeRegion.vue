@@ -7,7 +7,7 @@ const {
   line,
   text,
   label = '',
-  color = '#0369a1',
+  color = 'var(--yano-accent)',
   labelPosition = 'above',
 } = defineProps<{
   line: number

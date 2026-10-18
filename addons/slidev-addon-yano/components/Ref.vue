@@ -15,7 +15,7 @@
   gap: 0.5rem;
   align-items: baseline;
   font-size: 0.75rem;
-  color: #6b7280;
+  color: var(--yano-muted);
 }
 
 .ref-label {

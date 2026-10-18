@@ -21,7 +21,7 @@ const { title = 'zsh' } = defineProps<{ title?: string }>()
 .terminal-window {
   overflow: hidden;
   border-radius: 0.5rem;
-  background: #1e1e2e;
+  background: var(--yano-term-bg);
   box-shadow: 0 8px 24px rgb(0 0 0 / 0.2);
 }
 
@@ -30,7 +30,7 @@ const { title = 'zsh' } = defineProps<{ title?: string }>()
   gap: 0.4rem;
   align-items: center;
   padding: 0.4rem 0.75rem;
-  background: #2a2a3c;
+  background: var(--yano-term-bar);
 }
 
 .dot {
@@ -50,6 +50,6 @@ const { title = 'zsh' } = defineProps<{ title?: string }>()
   font-family: var(--slidev-code-font-family, 'JetBrains Mono', monospace);
   font-size: 0.8rem;
   line-height: 1.6;
-  color: #e5e7eb;
+  color: var(--yano-term-fg);
 }
 </style>

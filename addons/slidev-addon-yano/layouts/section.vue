@@ -20,19 +20,19 @@
   height: 0.375rem;
   margin-bottom: 1.5rem;
   border-radius: 9999px;
-  background: #0369a1;
+  background: var(--yano-accent);
 }
 
 .section-yano :deep(h1) {
   font-size: 3rem;
   font-weight: 900;
   line-height: 1.2;
-  color: #0369a1;
+  color: var(--yano-accent);
 }
 
 .section-yano :deep(p) {
   margin-top: 1rem;
   font-size: 1.25rem;
-  color: #6b7280;
+  color: var(--yano-muted);
 }
 </style>

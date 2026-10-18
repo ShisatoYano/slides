@@ -15,6 +15,6 @@
   text-align: center;
   font-size: 1.25rem;
   font-weight: 900;
-  color: #ef4444;
+  color: var(--yano-emphasis);
 }
 </style>

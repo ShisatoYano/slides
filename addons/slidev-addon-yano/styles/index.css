@@ -1,0 +1,18 @@
+/* 部品とレイアウトの配色。Slidevがアドオンの styles/index.css を自動で読み込むので、デッキ側の部品からも使える */
+:root {
+  /* デッキ全体の配色 */
+  --yano-accent: #0369a1;
+  --yano-accent-soft: #f0f9ff;
+  --yano-emphasis: #ef4444;
+  --yano-muted: #6b7280;
+
+  /* ターミナルの配色。TerminalWindow と、その中に描く図で共有する */
+  --yano-term-bg: #1e1e2e;
+  --yano-term-bar: #2a2a3c;
+  --yano-term-fg: #e5e7eb;
+  --yano-term-dim: #6c7086;
+  --yano-term-green: #a6e3a1;
+  --yano-term-blue: #89b4fa;
+  --yano-term-red: #f38ba8;
+  --yano-term-yellow: #f9e2af;
+}
