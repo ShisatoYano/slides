@@ -28,3 +28,9 @@ html.dark {
   --yano-muted: #9ca3af;
   --yano-label: #0284c7;
 }
+
+/* Slidevが読み込むリセットCSSが見出しの太さを本文と同じに戻すため、ここで太字に戻す。章扉と KeyMessage は 900 で別に指定している */
+.slidev-layout h1,
+.slidev-layout h2 {
+  font-weight: 700;
+}
