@@ -22,7 +22,7 @@ layout: none
 <div class="relative px-14 pt-12">
 
   <div class="mt-14">
-    <h1 class="!text-4xl !font-black !leading-tight text-sky-700">ブックマーク・タブを減らせない人にすすめたい<br>ターミナル+CLIによる整理整頓術</h1>
+    <h1 class="!text-4xl !font-black !leading-tight text-[var(--yano-accent)]">ブックマーク・タブを減らせない人にすすめたい<br>ターミナル+CLIによる整理整頓術</h1>
     <div class="mt-5 text-lg font-bold text-gray-400">Terminal Night 3 2026.10.15</div>
   </div>
 
@@ -435,6 +435,6 @@ layout: center
 ---
 
 <div class="text-center">
-  <div class="text-5xl font-black text-sky-700">ご清聴ありがとうございました </div>
+  <div class="text-5xl font-black text-[var(--yano-accent)]">ご清聴ありがとうございました </div>
   <div class="mt-6 text-xl font-bold text-red-400"> あなたのブックマーク・タブ管理が少しでも快適になりますように🙏 </div>
 </div>
