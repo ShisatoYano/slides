@@ -52,6 +52,7 @@
 | 出典・参考リンク | `<Ref>`(内側を空行で挟むと中のMarkdownが解釈される) |
 | コードの行の中の一部(引数1つなど) | `<AnnotatedCode>` + `<CodeRegion :line text label>`(行全体なら行ハイライトで足りるので使わない) |
 | 操作の流れ(発表の山場、1発表に1〜2枚まで) | frontmatterに `clicks: N`、デッキの `components/` に置いた部品に `:stage="$clicks"` を渡す。ターミナル画面の枠はアドオンの `<TerminalWindow>` |
+| ターミナル画面の見た目 | スクショは使わず `<TerminalWindow>` の中に文字で再現する。操作の流れとして動かすのは上の行の山場だけにし、それ以外は動かさない |
 
 - 部品の色は `addons/slidev-addon-yano/styles/index.css` の `--yano-*` 変数で指定し、16進数で直接書かない(配色と関係なく変えない色は除く)
 - 画像は各デッキの `images/` に置く。他のデッキの画像を相対パスで参照すると表示されない

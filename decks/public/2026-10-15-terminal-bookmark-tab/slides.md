@@ -173,6 +173,8 @@ layout: none
 </style>
 
 ---
+clicks: 3
+---
 
 ## ブラウザ管理からターミナル管理へ移行
 
@@ -186,11 +188,11 @@ layout: none
 
 </div>
 
-<img v-click src="./images/buku_list.png" class="h-80 w-full object-contain" />
+<BukuImportFlow :stage="$clicks" />
 
 </div>
 
-<KeyMessage v-click>
+<KeyMessage v-click="3">
 
   これで面倒なブラウザ操作とはおさらば！！
 
