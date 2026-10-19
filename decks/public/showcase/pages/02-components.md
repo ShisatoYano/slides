@@ -40,6 +40,7 @@ layout: section
   <div class="flex items-center gap-2"><span class="w-6 h-6 rounded border border-gray-300" style="background: var(--yano-term-blue)" /><code class="text-xs">--yano-term-blue</code></div>
   <div class="flex items-center gap-2"><span class="w-6 h-6 rounded border border-gray-300" style="background: var(--yano-term-red)" /><code class="text-xs">--yano-term-red</code></div>
   <div class="flex items-center gap-2"><span class="w-6 h-6 rounded border border-gray-300" style="background: var(--yano-term-yellow)" /><code class="text-xs">--yano-term-yellow</code></div>
+  <div class="flex items-center gap-2"><span class="w-6 h-6 rounded border border-gray-300" style="background: var(--yano-code-bg)" /><code class="text-xs">--yano-code-bg</code></div>
 </div>
 
 <!--

@@ -18,6 +18,9 @@
   --yano-term-blue: #268bd3;
   --yano-term-red: #db302d;
   --yano-term-yellow: #b28500;
+
+  /* コードブロックの背景。setup/shiki.ts で文字色をライトでも暗い配色にしているので、背景も暗いまま変えない */
+  --yano-code-bg: #1b1b1b;
 }
 
 /* Slidevのダークモード(d キー)。ターミナルはもともと暗いので変えない */
@@ -33,4 +36,9 @@ html.dark {
 .slidev-layout h1,
 .slidev-layout h2 {
   font-weight: 700;
+}
+
+/* --slidev-code-background ごと変えると、本文中の `inline code` まで暗い背景に暗い文字になるので、コードブロックだけ変える */
+.slidev-layout .slidev-code {
+  background: var(--yano-code-bg);
 }
