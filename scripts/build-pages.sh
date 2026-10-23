@@ -4,6 +4,7 @@
 set -eu
 
 base_path=${BASE_PATH:-/slides}
+site_url=${SITE_URL:-https://shisatoyano.github.io}
 out="$PWD/dist"
 
 rm -rf "$out"
@@ -48,6 +49,12 @@ cat > "$out/index.html" <<HTML
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shisato Yano の発表資料</title>
+  <meta name="description" content="Shisato Yano がイベントで登壇したときの発表資料の一覧">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shisato Yano の発表資料">
+  <meta property="og:description" content="Shisato Yano がイベントで登壇したときの発表資料の一覧">
+  <meta property="og:url" content="$site_url$base_path/">
+  <meta property="twitter:card" content="summary">
   <style>
     body { max-width: 48rem; margin: 3rem auto; padding: 0 1rem; font-family: system-ui, sans-serif; color: #111827; }
     h1 { color: #0369a1; }
