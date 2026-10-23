@@ -11,6 +11,7 @@
 - `publish: true` のデッキには、SNSに貼ったときのプレビュー用に次を用意する
   - 表紙を `npx slidev export <デッキ>/slides.md --format png --range 1` で書き出し、`<デッキ>/public/og-image.png` に置く
   - headmatterに `titleTemplate: '%s'` と `seoMeta`(`ogImage`・`ogUrl` は公開URLの絶対URL、`ogDescription`、`twitterCard: summary_large_image`)を書く。`ogImage: auto` はCIにブラウザがなく使えない。説明文は `info` に書くと前後に `"` が付くので `ogDescription` に書く
+  - SNS(X・Slack等)はURLごとにプレビューをキャッシュするため、設定前に貼ったURLや表紙を変えたあとのURLはプレビューが更新されない。共有するときはURLに `?v=2` のようなクエリを付け、変えるたびに番号を上げる(`#/1` は後ろに付ける: `…/<デッキ名>/?v=2#/1`)
 
 ## 作り始める前に確認すること
 
