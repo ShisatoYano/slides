@@ -8,6 +8,9 @@
 - 新しい部品や記法は、まず `decks/public/showcase/` で試し、使い方の見本として残す(イベント用ではないので日付を付けない)
 - `addons/` やデッキの `components/` に `.vue` を新しく追加したら、開発サーバを再起動する。部品はサーバ起動時に登録されるため、起動中に追加した部品はタグの中身だけが表示され、props(`label` など)が出ない
 - `decks/public/` はGitで公開してよい資料の置き場。そのうちheadmatterに `publish: true` を書いたデッキだけが、`main` へのpushで GitHub Pages(`https://shisatoyano.github.io/slides/<デッキ名>/`)にも公開される。サンプルや見本には書かない
+- `publish: true` のデッキには、SNSに貼ったときのプレビュー用に次を用意する
+  - 表紙を `npx slidev export <デッキ>/slides.md --format png --range 1` で書き出し、`<デッキ>/public/og-image.png` に置く
+  - headmatterに `titleTemplate: '%s'` と `seoMeta`(`ogImage`・`ogUrl` は公開URLの絶対URL、`ogDescription`、`twitterCard: summary_large_image`)を書く。`ogImage: auto` はCIにブラウザがなく使えない。説明文は `info` に書くと前後に `"` が付くので `ogDescription` に書く
 
 ## 作り始める前に確認すること
 
