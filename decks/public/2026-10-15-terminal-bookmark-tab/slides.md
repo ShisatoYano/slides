@@ -1,8 +1,17 @@
 ---
 theme: default
 title: ブックマーク・タブを減らせない人にすすめたい, ターミナル+CLIによる整理整頓術
+# 既定の '%s - Slidev' だとタブ名やSNSのカードのタイトルにツール名が付く
+titleTemplate: '%s'
 # GitHub Pages に公開する(scripts/build-pages.sh が見る)
 publish: true
+# SNSのクローラは相対パスの画像を解決しないため絶対URLで書く。auto はCIにブラウザがなく撮影できないので使わない
+# 説明文は info に書くとSlidevが前後に " を付けて出力するため ogDescription に書く
+seoMeta:
+  ogDescription: ターミナルとCLIでブックマークとタブを整理する方法(Terminal Night 3)
+  ogImage: https://shisatoyano.github.io/slides/2026-10-15-terminal-bookmark-tab/og-image.png
+  ogUrl: https://shisatoyano.github.io/slides/2026-10-15-terminal-bookmark-tab/
+  twitterCard: summary_large_image
 # 日本語がGoogle Fonts側の欧文フォントにフォールバックして崩れないよう、和文フォントを明示する
 fonts:
   sans: Noto Sans JP
