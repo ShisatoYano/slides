@@ -124,44 +124,43 @@ layout: none
 
 ---
 
-## 数式を読む前に、まず動かして見る <span class="en">Run it first, read the math later</span>
+## なぜ作っているのか <span class="en">Why I build this</span>
 
-<div class="mt-8 grid grid-cols-2 gap-10">
+<div class="mt-6 grid grid-cols-2 gap-10">
 
 <div>
-  <div class="text-lg font-black text-gray-500">つまずきやすいところ <span class="text-sm text-gray-400">The hard part</span></div>
+  <div class="text-lg font-black text-gray-500">自分が学び始めたとき <span class="text-sm text-gray-400">When I started learning</span></div>
 
-- 数式だけだと、車がどう動くか想像しにくい
+- 入口が数式や論文しかなかった
+- 車がどう動くのか想像できなかった
 - 実車やセンサは、気軽には用意できない
 
 </div>
 
-<div v-click>
-  <div class="text-lg font-black text-[var(--yano-accent)]">このリポジトリでは <span class="text-sm text-gray-400">This repo</span></div>
+<div v-click="2">
+  <div class="text-lg font-black text-[var(--yano-accent)]">だから作った <span class="text-sm text-gray-400">So I built</span></div>
 
 - Python と定番ライブラリだけで動く
-- 40以上のシミュレーションを、1行で実行してアニメーションで見られる
+- 40以上のシミュレーションを、コマンド1行で実行してアニメーションで見られる
 
 </div>
 
 </div>
 
-<div v-click class="mt-6">
+<Callout v-click="3" label="目指すこと / What I aim for" class="mt-4">
+  同じところでつまずく人を減らして、自動運転に関わる人を増やしたい
+  <div class="text-sm text-gray-500 dark:text-gray-400">Fewer people stuck where I was, more people in autonomous driving</div>
+</Callout>
 
-```bash
-python src/simulations/path_tracking/pure_pursuit_path_tracking/pure_pursuit_path_tracking.py
-```
+<KeyMessage v-click="1">
 
-</div>
-
-<KeyMessage v-click>
-
-  コマンド1行で、アルゴリズムが動く様子が見える <span class="en">One command, and you see it move</span>
+  理想の入門書が世の中にない。だったら自分で作ればいい <span class="en">The guide I wanted didn't exist, so I'm writing it</span>
 
 </KeyMessage>
 
 <!--
-30秒。必要なのは Python と NumPy・Matplotlib などの定番ライブラリだけ
+40秒。自分が学び始めたときの苦労 → (クリック)理想の入門書がない、だったら自分で作ればいい → (クリック)作ったもの → (クリック)目指すこと。
+必要なのは Python と NumPy・Matplotlib などの定番ライブラリだけ
 -->
 
 ---
