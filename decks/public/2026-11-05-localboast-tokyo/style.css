@@ -1,0 +1,12 @@
+/* スライドの見出しは ## で書き、発表時の太字の見た目(font-black)に揃える */
+.slidev-layout h2 {
+  font-weight: 900;
+}
+
+/* 日英併記の英語側。日本語より一段小さく薄くして、主従を付ける */
+.en {
+  display: block;
+  font-size: 0.6em;
+  font-weight: 700;
+  color: var(--yano-muted);
+}
