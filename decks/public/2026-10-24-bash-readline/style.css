@@ -1,0 +1,61 @@
+/* スライドの見出しは ## で書き、発表時の太字の見た目(font-black)に揃える */
+.slidev-layout h2 {
+  font-weight: 900;
+}
+
+/* まとめの「動詞 + 説明」の行 */
+.summary {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+}
+
+.summary-verb {
+  font-weight: 900;
+  color: var(--yano-accent);
+}
+
+/* TerminalWindow の中に文字で再現する画面の部品 */
+.term-line {
+  white-space: pre;
+}
+
+.term-prompt {
+  margin-right: 0.4rem;
+  color: var(--yano-term-green);
+}
+
+.term-cursor {
+  display: inline-block;
+  width: 0.5rem;
+  height: 1em;
+  vertical-align: text-bottom;
+  background: var(--yano-term-fg);
+}
+
+.term-dim {
+  color: var(--yano-term-dim);
+}
+
+/* キー操作で入った・変わった部分 */
+.term-hl {
+  color: var(--yano-term-yellow);
+  font-weight: 700;
+}
+
+/* 行と行の間に挟む「ここでキーを押す」の注記 */
+.term-key {
+  margin: 0.2rem 0;
+  font-family: var(--slidev-font-sans, sans-serif);
+  font-size: 0.75rem;
+  color: var(--yano-term-blue);
+}
+
+/* 左に操作の説明、右にターミナルを並べる例示スライドの説明文 */
+.steps {
+  font-size: 1.1rem;
+  line-height: 2;
+}
