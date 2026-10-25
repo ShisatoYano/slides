@@ -49,28 +49,42 @@ layout: none
 
 ## 自己紹介 <span class="en">About me</span>
 
-<div class="mt-6 flex items-center gap-12">
-  <img src="./images/icon.jpeg" class="w-40 h-40 rounded-full border-4 border-sky-100"/>
-  <div>
-    <div class="text-4xl font-black">Shisato Yano</div>
-    <div class="mt-4 text-base leading-relaxed text-gray-600 dark:text-gray-300">
-      仕事: 車や船の自動運転システムを作るソフトウェアエンジニア<br>
-      <span class="text-sm text-gray-400">Software engineer building autonomous driving systems for cars and ships</span><br>
-      作っているもの: 自動運転技術の入門書OSS(GitHub ★1.9k)<br>
-      <span class="text-sm text-gray-400">Built: an open-source beginner's guide to autonomous driving</span>
+<div class="mt-4 grid grid-cols-2 gap-10 items-start">
+
+<div>
+  <div class="flex items-center gap-5">
+    <img src="./images/icon.jpeg" class="w-24 h-24 rounded-full border-4 border-sky-100"/>
+    <div>
+      <div class="text-3xl font-black">Shisato Yano</div>
+      <div class="mt-2 flex gap-5 text-sm">
+        <a href="https://x.com/4310sy" target="_blank" class="flex items-center gap-1 !text-gray-700 dark:!text-gray-300 !border-none">
+          <carbon-logo-x />@4310sy
+        </a>
+        <a href="https://github.com/ShisatoYano" target="_blank" class="flex items-center gap-1 !text-gray-700 dark:!text-gray-300 !border-none">
+          <carbon-logo-github />ShisatoYano
+        </a>
+      </div>
     </div>
-    <div class="mt-4 flex gap-6 text-base">
-      <a href="https://x.com/4310sy" target="_blank" class="flex items-center gap-2 !text-gray-700 dark:!text-gray-300 !border-none">
-        <carbon-logo-x class="text-xl" />@4310sy
-      </a>
-      <a href="https://github.com/ShisatoYano" target="_blank" class="flex items-center gap-2 !text-gray-700 dark:!text-gray-300 !border-none">
-        <carbon-logo-github class="text-xl" />ShisatoYano
-      </a>
-    </div>
+  </div>
+  <div class="mt-5 text-base leading-snug text-gray-600 dark:text-gray-300">
+    自動運転システムを作るソフトウェアエンジニア<br>
+    <span class="text-sm text-gray-400">Software engineer building autonomous driving systems</span>
   </div>
 </div>
 
-<Callout label="今日のゴール / Today's goal" class="mt-8">
+<div>
+  <div class="text-base leading-snug text-gray-600 dark:text-gray-300">
+    紹介するもの: 自動運転入門書を作るOSSプロジェクト<br>
+    <span class="text-sm text-gray-400">OSS project for an autonomous driving guidebook</span>
+  </div>
+  <a href="https://github.com/ShisatoYano/AutonomousVehicleControlBeginnersGuide" target="_blank" class="block mt-2 !border-none">
+    <img src="./images/repo_card.png" class="w-full rounded-lg shadow-lg" />
+  </a>
+</div>
+
+</div>
+
+<Callout label="今日のゴール / Today's goal" class="mt-5">
   自動運転のアルゴリズムは、Pythonだけで動かしながら学べる
   <div class="text-sm text-gray-500 dark:text-gray-400">You can learn autonomous driving algorithms by running them, with just Python</div>
 </Callout>
