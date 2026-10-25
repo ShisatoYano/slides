@@ -56,7 +56,7 @@ layout: none
     <div class="mt-4 text-base leading-relaxed text-gray-600 dark:text-gray-300">
       仕事: 車や船の自動運転システムを作るソフトウェアエンジニア<br>
       <span class="text-sm text-gray-400">Software engineer building autonomous driving systems for cars and ships</span><br>
-      作ったもの: 自動運転の入門書OSS(GitHub ★1.9k)<br>
+      作っているもの: 自動運転技術の入門書OSS(GitHub ★1.9k)<br>
       <span class="text-sm text-gray-400">Built: an open-source beginner's guide to autonomous driving</span>
     </div>
     <div class="mt-4 flex gap-6 text-base">
