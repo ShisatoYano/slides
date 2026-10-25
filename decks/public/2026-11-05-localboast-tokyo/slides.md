@@ -1,6 +1,6 @@
 ---
 theme: default
-title: 自動運転のアルゴリズムは、Pythonだけで動かしながら学べる
+title: コードを動かして遊びながら、自動運転の面白さに触れてみよう
 # 既定の '%s - Slidev' だとタブ名やSNSのカードのタイトルにツール名が付く
 titleTemplate: '%s'
 # GitHub Pages に公開する(scripts/build-pages.sh が見る)
@@ -8,7 +8,7 @@ publish: true
 # SNSのクローラは相対パスの画像を解決しないため絶対URLで書く。auto はCIにブラウザがなく撮影できないので使わない
 # 説明文は info に書くとSlidevが前後に " を付けて出力するため ogDescription に書く
 seoMeta:
-  ogDescription: 自動運転のアルゴリズムをPythonで動かしながら学べるOSSの紹介(//localboast Tokyo)
+  ogDescription: コードを動かして遊びながら、自動運転の面白さに触れてみよう(//localboast Tokyo)
   ogImage: https://shisatoyano.github.io/slides/2026-11-05-localboast-tokyo/og-image.png
   ogUrl: https://shisatoyano.github.io/slides/2026-11-05-localboast-tokyo/
   twitterCard: summary_large_image
@@ -31,8 +31,8 @@ layout: none
 <div class="relative px-14 pt-12">
 
   <div class="mt-14">
-    <h1 class="!text-4xl !font-black !leading-tight text-[var(--yano-accent)]">自動運転のアルゴリズムは、<br>Pythonだけで動かしながら学べる</h1>
-    <div class="mt-4 text-xl font-bold text-gray-500">Learn autonomous driving algorithms by running them, with just Python</div>
+    <h1 class="!text-4xl !font-black !leading-tight text-[var(--yano-accent)]">コードを動かして遊びながら、<br>自動運転の面白さに触れてみよう</h1>
+    <div class="mt-4 text-xl font-bold text-gray-500">Play with the code and discover the fun of autonomous driving</div>
     <div class="mt-4 text-lg font-bold text-gray-400">//localboast Tokyo 2026.11.05</div>
   </div>
 
@@ -84,13 +84,13 @@ layout: none
 
 </div>
 
-<Callout label="今日のゴール / Today's goal" class="mt-5">
-  自動運転のアルゴリズムは、Pythonだけで動かしながら学べる
-  <div class="text-sm text-gray-500 dark:text-gray-400">You can learn autonomous driving algorithms by running them, with just Python</div>
+<Callout label="今日のテーマ / Today's theme" class="mt-5">
+  コードを動かして遊びながら、自動運転の面白さに触れてみよう
+  <div class="text-sm text-gray-500 dark:text-gray-400">Play with the code and discover the fun of autonomous driving</div>
 </Callout>
 
 <!--
-25秒。「難しそうな自動運転を、手元のPythonで動かして学べるようにしたOSSを見せます」
+25秒。「今日は、コードを動かして遊びながら、自動運転の面白さに触れてもらいます」
 -->
 
 ---
@@ -221,7 +221,7 @@ vis.draw()
 
 <KeyMessage v-click>
 
-  車・コース・制御を部品に分けたので、制御だけ取り替えて比べられる <span class="en">Parts are separate, so you can swap and compare</span>
+  制御の部品を1行取り替えるだけで、違う走り方を試せる <span class="en">Swap one line and try a different way to drive</span>
 
 </KeyMessage>
 
@@ -286,25 +286,25 @@ Pure Pursuitは先の点を目指すので、急カーブでは内側に入り�
 <v-clicks>
 
 <div class="summary">
-  <div class="summary-verb">全体を</div>
-  <div>見る・決める・動かす、の各段階をPythonのシミュレーションで</div>
+  <div class="summary-verb">仕組み</div>
+  <div>見る・決める・動かす、の繰り返しで車が自分で走る</div>
 </div>
 
 <div class="summary">
-  <div class="summary-verb">つなげて</div>
-  <div>理論から実装・設計まで、動くPythonコードで一続きに学べる</div>
+  <div class="summary-verb">コード</div>
+  <div>認識から制御まで、全分野が動くPythonコードになっている</div>
 </div>
 
 <div class="summary">
-  <div class="summary-verb">比べて</div>
-  <div>部品を1行差し替えれば、同じ条件で方式どうしを比べられる</div>
+  <div class="summary-verb">遊び方</div>
+  <div>部品を1行取り替えるだけで、走り方の違いを試せる</div>
 </div>
 
 </v-clicks>
 
 <KeyMessage v-click>
 
-  自動運転のアルゴリズムは、Pythonだけで動かしながら学べる <span class="en">Learn by running it, with just Python</span>
+  コードを動かして遊びながら、自動運転の面白さに触れてみよう <span class="en">Play with the code and discover the fun of autonomous driving</span>
 
 </KeyMessage>
 
@@ -330,7 +330,7 @@ Pure Pursuitは先の点を目指すので、急カーブでは内側に入り�
 
 ---
 
-## 試してみてください <span class="en">Try it out</span>
+## 遊んでみてください <span class="en">Have fun with it</span>
 
 <div class="mt-6 grid grid-cols-[3fr_2fr] gap-8 items-center">
 
