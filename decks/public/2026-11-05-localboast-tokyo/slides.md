@@ -126,30 +126,30 @@ layout: none
 
 ## なぜ作っているのか <span class="en">Why I build this</span>
 
-<div class="mt-6 grid grid-cols-2 gap-10">
+<div class="mt-4 grid grid-cols-2 gap-8 text-base">
 
 <div>
   <div class="text-lg font-black text-gray-500">自分が学び始めたとき <span class="text-sm text-gray-400">When I started learning</span></div>
+  <div class="text-sm text-gray-400">新卒で自動運転の研究開発に配属。大学ではロボット制御を研究</div>
 
-- 入口が数式や論文しかなかった
-- 車がどう動くのか想像できなかった
-- 実車やセンサは、気軽には用意できない
+- 講習で学べたのは理論まで。実装の仕方とシステムの組み方は自力
+- 分野ごとに本・記事・サンプルコードを探して寄せ集めた
 
 </div>
 
 <div v-click="2">
   <div class="text-lg font-black text-[var(--yano-accent)]">だから作った <span class="text-sm text-gray-400">So I built</span></div>
 
-- Python と定番ライブラリだけで動く
-- 40以上のシミュレーションを、コマンド1行で実行してアニメーションで見られる
+- 認識から制御まで、全分野を1つのリポジトリに
+- 理論を、動くPythonコードと部品に分けた設計で
 
 </div>
 
 </div>
 
-<Callout v-click="3" label="目指すこと / What I aim for" class="mt-4">
-  同じところでつまずく人を減らして、自動運転に関わる人を増やしたい
-  <div class="text-sm text-gray-500 dark:text-gray-400">Fewer people stuck where I was, more people in autonomous driving</div>
+<Callout v-click="3" label="目指すこと / What I aim for" class="mt-3">
+  支えてくれた情報と人への恩返しに、これから入門する人の入り口をつくり、自動運転に関わる人を増やしたい
+  <div class="text-sm text-gray-500 dark:text-gray-400">Giving back: an entry point for beginners, and more people in autonomous driving</div>
 </Callout>
 
 <KeyMessage v-click="1">
@@ -159,8 +159,8 @@ layout: none
 </KeyMessage>
 
 <!--
-40秒。自分が学び始めたときの苦労 → (クリック)理想の入門書がない、だったら自分で作ればいい → (クリック)作ったもの → (クリック)目指すこと。
-必要なのは Python と NumPy・Matplotlib などの定番ライブラリだけ
+45秒。ロボット制御を研究していた自分でも、自動運転は学びにくかった。講習は理論だけで、残りは本・記事・サンプルコードの寄せ集め
+→ (クリック)理想の入門書がない、だったら自分で作ればいい → (クリック)作ったもの → (クリック)目指すこと。いろんな情報と人に助けられてきたので、その恩返し
 -->
 
 ---
@@ -277,8 +277,8 @@ Pure Pursuitは先の点を目指すので、急カーブでは内側に入り�
 </div>
 
 <div class="summary">
-  <div class="summary-verb">1行で</div>
-  <div>コマンド1行で、アルゴリズムが動く様子をアニメーションで見られる</div>
+  <div class="summary-verb">つなげて</div>
+  <div>理論から実装・設計まで、動くPythonコードで一続きに学べる</div>
 </div>
 
 <div class="summary">
