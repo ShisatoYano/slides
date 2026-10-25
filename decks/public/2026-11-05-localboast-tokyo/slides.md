@@ -70,6 +70,9 @@ layout: none
     自動運転システムを作るソフトウェアエンジニア<br>
     <span class="text-sm text-gray-400">Software engineer building autonomous driving systems</span>
   </div>
+  <div class="mt-3 text-sm leading-snug text-gray-500 dark:text-gray-400">
+    新卒で自動運転の研究開発に配属。大学ではロボット制御を研究
+  </div>
 </div>
 
 <div>
@@ -95,76 +98,42 @@ layout: none
 
 ---
 
-## 自動運転は「見る → 決める → 動かす」の繰り返し <span class="en">Sense → Plan → Act, over and over</span>
-
-<div class="mt-6 grid grid-cols-3 gap-6 text-center">
-
-<div v-click>
-  <img src="./images/lidar.gif" class="h-44 mx-auto" />
-  <div class="mt-2 text-xl font-black text-[var(--yano-accent)]">見る <span class="text-sm text-gray-400">Sense</span></div>
-  <div class="text-sm">センサで周りの障害物を見つける</div>
-</div>
-
-<div v-click>
-  <img src="./images/astar.gif" class="h-44 mx-auto" />
-  <div class="mt-2 text-xl font-black text-[var(--yano-accent)]">決める <span class="text-sm text-gray-400">Plan</span></div>
-  <div class="text-sm">ぶつからない道を決める</div>
-</div>
-
-<div v-click>
-  <img src="./images/pure_pursuit.gif" class="h-44 mx-auto" />
-  <div class="mt-2 text-xl font-black text-[var(--yano-accent)]">動かす <span class="text-sm text-gray-400">Act</span></div>
-  <div class="text-sm">決めた道どおりにハンドルを切る</div>
-</div>
-
-</div>
-
-<KeyMessage v-click>
-
-  今日は「動かす」= ハンドルの切り方の話 <span class="en">Today: how to steer</span>
-
-</KeyMessage>
-
-<Ref>
-
-<carbon-logo-github /> [ShisatoYano/AutonomousVehicleControlBeginnersGuide](https://github.com/ShisatoYano/AutonomousVehicleControlBeginnersGuide)
-
-</Ref>
-
-<!--
-40秒。人間の運転と同じ: 目で見て、どこを通るか決めて、ハンドルとアクセルを操作する。
-専門用語では 認識・経路計画・制御。今日はこのうち「動かす」を扱う
--->
-
----
-
 ## なぜ作っているのか <span class="en">Why I build this</span>
 
-<div class="mt-4 grid grid-cols-2 gap-8 text-base">
+<div class="mt-2 grid grid-cols-[3fr_2fr] gap-6 items-start text-base">
 
 <div>
   <div class="text-lg font-black text-gray-500">自分が学び始めたとき <span class="text-sm text-gray-400">When I started learning</span></div>
-  <div class="text-sm text-gray-400">新卒で自動運転の研究開発に配属。大学ではロボット制御を研究</div>
 
 - 講習で学べたのは理論まで。実装の仕方とシステムの組み方は自力
 - 分野ごとに本・記事・サンプルコードを探して寄せ集めた
 
 </div>
 
-<div v-click="2">
-  <div class="text-lg font-black text-[var(--yano-accent)]">だから作った <span class="text-sm text-gray-400">So I built</span></div>
-
-- 認識から制御まで、全分野を1つのリポジトリに
-- 理論を、動くPythonコードと部品に分けた設計で
-
-</div>
-
-</div>
-
-<Callout v-click="3" label="目指すこと / What I aim for" class="mt-3">
-  支えてくれた情報と人への恩返しに、これから入門する人の入り口をつくり、自動運転に関わる人を増やしたい
-  <div class="text-sm text-gray-500 dark:text-gray-400">Giving back: an entry point for beginners, and more people in autonomous driving</div>
+<Callout v-click="3" label="目指すこと / What I aim for">
+  恩返しとして、入門する人の入り口をつくり、自動運転に関わる人を増やしたい
+  <div class="text-xs text-gray-500 dark:text-gray-400">Giving back: an entry point for beginners, and more people in autonomous driving</div>
 </Callout>
+
+</div>
+
+<div v-click="2" class="mt-1">
+  <div class="text-lg font-black text-[var(--yano-accent)]">だから、見る → 決める → 動かす の全部を動くコードにした <span class="text-sm text-gray-400">So I made every step runnable</span></div>
+  <div class="mt-1 grid grid-cols-3 gap-4 text-center">
+    <div>
+      <img src="./images/lidar.gif" class="h-24 mx-auto" />
+      <div class="text-sm"><span class="font-black text-[var(--yano-accent)]">見る</span> 障害物を見つける</div>
+    </div>
+    <div>
+      <img src="./images/astar.gif" class="h-24 mx-auto" />
+      <div class="text-sm"><span class="font-black text-[var(--yano-accent)]">決める</span> ぶつからない道を決める</div>
+    </div>
+    <div>
+      <img src="./images/pure_pursuit.gif" class="h-24 mx-auto" />
+      <div class="text-sm"><span class="font-black text-[var(--yano-accent)]">動かす</span> 道どおりにハンドルを切る</div>
+    </div>
+  </div>
+</div>
 
 <KeyMessage v-click="1">
 
@@ -173,8 +142,10 @@ layout: none
 </KeyMessage>
 
 <!--
-45秒。ロボット制御を研究していた自分でも、自動運転は学びにくかった。講習は理論だけで、残りは本・記事・サンプルコードの寄せ集め
-→ (クリック)理想の入門書がない、だったら自分で作ればいい → (クリック)作ったもの → (クリック)目指すこと。いろんな情報と人に助けられてきたので、その恩返し
+55秒。ロボット制御を研究していた自分でも、自動運転は学びにくかった。講習は理論だけで、残りは本・記事・サンプルコードの寄せ集め
+→ (クリック)理想の入門書がない、だったら自分で作ればいい
+→ (クリック)自動運転は人の運転と同じで、見る・決める・動かすの繰り返し。その全部を動くコードにした(専門用語では 認識・経路計画・制御)
+→ (クリック)いろんな情報と人に助けられてきたので、その恩返し。次は「動かす」=ハンドルの切り方で遊んでみる
 -->
 
 ---
