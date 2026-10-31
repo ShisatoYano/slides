@@ -1,6 +1,6 @@
 ---
 theme: default
-title: コードを動かして遊びながら、自動運転の面白さに触れてみよう
+title: 無ければ作ろう！理想の技術書籍を作るOSSプロジェクト
 # 既定の '%s - Slidev' だとタブ名やSNSのカードのタイトルにツール名が付く
 titleTemplate: '%s'
 # GitHub Pages に公開する(scripts/build-pages.sh が見る)
@@ -8,7 +8,7 @@ publish: true
 # SNSのクローラは相対パスの画像を解決しないため絶対URLで書く。auto はCIにブラウザがなく撮影できないので使わない
 # 説明文は info に書くとSlidevが前後に " を付けて出力するため ogDescription に書く
 seoMeta:
-  ogDescription: コードを動かして遊びながら、自動運転の面白さに触れてみよう(//localboast Tokyo)
+  ogDescription: 無ければ作ろう！理想の技術書籍を作るOSSプロジェクト(//localboast Tokyo)
   ogImage: https://shisatoyano.github.io/slides/2026-11-05-localboast-tokyo/og-image.png
   ogUrl: https://shisatoyano.github.io/slides/2026-11-05-localboast-tokyo/
   twitterCard: summary_large_image
@@ -31,8 +31,8 @@ layout: none
 <div class="relative px-14 pt-12">
 
   <div class="mt-14">
-    <h1 class="!text-4xl !font-black !leading-tight text-[var(--yano-accent)]">コードを動かして遊びながら、<br>自動運転の面白さに触れてみよう</h1>
-    <div class="mt-4 text-xl font-bold text-gray-500">Play with the code and discover the fun of autonomous driving</div>
+    <h1 class="!text-4xl !font-black !leading-tight text-[var(--yano-accent)]">無ければ作ろう！<br>理想の技術書籍を作るOSSプロジェクト</h1>
+    <div class="mt-4 text-xl font-bold text-gray-500">Want it or make it! An OSS project for the best tech readings</div>
     <div class="mt-4 text-lg font-bold text-gray-400">//localboast Tokyo 2026.11.05</div>
   </div>
 
@@ -70,30 +70,41 @@ layout: none
     自動運転システムを作るソフトウェアエンジニア<br>
     <span class="text-sm text-gray-400">Software engineer building autonomous driving systems</span>
   </div>
-  <div class="mt-3 text-sm leading-snug text-gray-500 dark:text-gray-400">
-    新卒で自動運転の研究開発に配属。大学ではロボット制御を研究
-  </div>
 </div>
 
 <div>
-  <div class="text-base leading-snug text-gray-600 dark:text-gray-300">
-    紹介するもの: 自動運転入門書を作るOSSプロジェクト<br>
-    <span class="text-sm text-gray-400">OSS project for an autonomous driving guidebook</span>
+  <div class="text-base font-bold text-gray-600 dark:text-gray-300">自動運転システムとは？ <span class="text-sm text-gray-400">What's an autonomous system?</span></div>
+  <div class="mt-2 grid">
+    <img v-click="[1, 2]" src="./images/komatsu_ahs.jpg" class="[grid-area:1/1] w-full h-48 object-cover rounded-lg" />
+    <img v-click="2" src="./images/eightknot_vessel.jpg" class="[grid-area:1/1] w-full h-48 object-cover rounded-lg" />
   </div>
-  <a href="https://github.com/ShisatoYano/AutonomousVehicleControlBeginnersGuide" target="_blank" class="block mt-2 !border-none">
-    <img src="./images/repo_card.png" class="w-full rounded-lg shadow-lg" />
-  </a>
+  <div class="grid mt-1 text-sm">
+    <div v-click="[1, 2]" class="[grid-area:1/1]">でっかいトラックを無人で動かしたり<div class="text-xs text-gray-400">Driving giant trucks with nobody aboard</div></div>
+    <div v-click="2" class="[grid-area:1/1]">海の上で船を自律航行させたり<div class="text-xs text-gray-400">Letting boats sail on their own</div></div>
+  </div>
 </div>
 
 </div>
 
-<Callout label="今日のテーマ / Today's theme" class="mt-5">
-  コードを動かして遊びながら、自動運転の面白さに触れてみよう
-  <div class="text-sm text-gray-500 dark:text-gray-400">Play with the code and discover the fun of autonomous driving</div>
+<Callout v-click="3" label="今日紹介するもの / What I'll introduce" class="mt-4">
+  <div class="text-2xl font-black text-[var(--yano-accent)]">自動運転ソフトウェア開発の入門書を作るOSSプロジェクト</div>
+  <div class="text-sm text-gray-500 dark:text-gray-400">An OSS project for a beginner's guide to autonomous driving software</div>
 </Callout>
 
+<Ref v-click="[1, 2]">
+
+[コマツ ニュースリリース(2026年4月22日)](https://www.komatsu.jp/ja/newsroom/2026/20260422)
+
+</Ref>
+
+<Ref v-click="2">
+
+[エイトノット 公式サイト](https://8kt.jp/)
+
+</Ref>
+
 <!--
-25秒。「今日は、コードを動かして遊びながら、自動運転の面白さに触れてもらいます」
+25秒。(クリック)鉱山の無人ダンプ → (クリック)小型船の自律航行と、陸でも海でも自動運転を作ってきた → (クリック)今日は、自動運転の入門書をOSSで作っている話をします
 -->
 
 ---
