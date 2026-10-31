@@ -109,54 +109,213 @@ layout: none
 
 ---
 
-## なぜ作っているのか <span class="en">Why I build this</span>
+## 自動運転を学ぶ上でのつらみ <span class="en">The pain of learning autonomous driving</span>
 
-<div class="mt-2 grid grid-cols-[3fr_2fr] gap-6 items-start text-base">
-
-<div>
-  <div class="text-lg font-black text-gray-500">自分が学び始めたとき <span class="text-sm text-gray-400">When I started learning</span></div>
-
-- 講習で学べたのは理論まで。実装の仕方とシステムの組み方は自力
-- 分野ごとに本・記事・サンプルコードを探して寄せ集めた
-
+<div class="text-base text-gray-600 dark:text-gray-300">
+  <span class="text-3xl font-black text-[var(--yano-emphasis)]">技術の総合格闘技</span> と言われるくらい、必要な知識の幅が広い
+  <div class="text-sm text-gray-400">It takes a wide range of tech, like mixed martial arts</div>
 </div>
 
-<Callout v-click="3" label="目指すこと / What I aim for">
-  恩返しとして、入門する人の入り口をつくり、自動運転に関わる人を増やしたい
-  <div class="text-xs text-gray-500 dark:text-gray-400">Giving back: an entry point for beginners, and more people in autonomous driving</div>
-</Callout>
+<div class="autonomy">
 
-</div>
+<AutonomyScene class="mt-1" :play="$clicks >= 1" />
 
-<div v-click="2" class="mt-1">
-  <div class="text-lg font-black text-[var(--yano-accent)]">だから、見る → 決める → 動かす の全部を動くコードにした <span class="text-sm text-gray-400">So I made every step runnable</span></div>
-  <div class="mt-1 grid grid-cols-3 gap-4 text-center">
-    <div>
-      <img src="./images/lidar.gif" class="h-24 mx-auto" />
-      <div class="text-sm"><span class="font-black text-[var(--yano-accent)]">見る</span> 障害物を見つける</div>
-    </div>
-    <div>
-      <img src="./images/astar.gif" class="h-24 mx-auto" />
-      <div class="text-sm"><span class="font-black text-[var(--yano-accent)]">決める</span> ぶつからない道を決める</div>
-    </div>
-    <div>
-      <img src="./images/pure_pursuit.gif" class="h-24 mx-auto" />
-      <div class="text-sm"><span class="font-black text-[var(--yano-accent)]">動かす</span> 道どおりにハンドルを切る</div>
-    </div>
+<div class="map mt-4">
+  <div v-click="1" class="layer flow">
+    <div class="row-label" style="grid-row: 1">要素技術</div>
+    <div class="node" style="--i: 0; grid-column: 2 / 8">センシング</div>
+    <div class="node" style="--i: 1; grid-column: 8 / 14">自己位置推定</div>
+    <div class="node" style="--i: 2; grid-column: 14 / 20">認識</div>
+    <div class="node" style="--i: 3; grid-column: 20 / 26">経路計画</div>
+    <div class="node" style="--i: 4; --len: 2; grid-column: 26 / 32">制御</div>
+  </div>
+  <div v-click="2" class="layer base">
+    <div class="row-label" style="grid-row: 2">基礎知識</div>
+    <div class="node" style="--i: 0; grid-column: 2 / 7">数学</div>
+    <div class="node" style="--i: 1; grid-column: 7 / 12">物理学</div>
+    <div class="node" style="--i: 2; grid-column: 12 / 17">アルゴリズム</div>
+    <div class="node" style="--i: 3; grid-column: 17 / 22">データ構造</div>
+    <div class="node" style="--i: 4; grid-column: 22 / 27">ソフト設計</div>
+    <div class="node" style="--i: 5; grid-column: 27 / 32">システム<br>アーキテクチャ</div>
+  </div>
+  <div v-click="3" class="layer">
+    <div class="band" style="grid-area: 1 / 2 / 2 / 20"><span class="band-tag">よくある本のカバー範囲</span></div>
+    <div class="band" style="grid-area: 2 / 2 / 3 / 22"></div>
+    <div class="hole" style="grid-area: 1 / 20 / 2 / 32"></div>
+    <div class="hole" style="grid-area: 2 / 22 / 3 / 32"></div>
+  </div>
+  <div v-click="4" class="gap-note">
+    <span class="gap-label">全部を通しで学べる本は見つからなかった <span class="text-xs opacity-80">/ None covered it all</span></span>
   </div>
 </div>
 
-<KeyMessage v-click="1">
+</div>
 
-  理想の入門書が世の中にない。だったら自分で作ればいい <span class="en">The guide I wanted didn't exist, so I'm writing it</span>
+<div v-click="5" class="finale">
+  <div class="finale-text">無ければ作ろう！</div>
+  <div class="finale-en">Want it or make it!</div>
+</div>
 
-</KeyMessage>
+<style>
+/* 場面の各段階と、流れの箱の点灯を同じ時刻で進める */
+.autonomy {
+  --scene-start: 0.9s;
+  --scene-step: 1.2s;
+}
+
+/* 流れ・土台・本の帯を、行ラベルの列 + 30列(要素技術5つ・基礎知識6つが割り切れる)の同じ格子の層として重ね、帯がどの箱にかぶるかを位置で示す */
+.map {
+  position: relative;
+  display: grid;
+}
+
+/* 層ごとに v-click の表示切り替えが効くよう、display: contents にはしない */
+.layer {
+  grid-area: 1 / 1;
+  display: grid;
+  grid-template-columns: 4rem repeat(30, 1fr);
+  grid-template-rows: 3rem 3rem;
+  gap: 0.75rem 0.5rem;
+}
+
+.row-label {
+  grid-column: 1;
+  display: grid;
+  place-items: center start;
+  font-size: 0.85rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--yano-accent);
+}
+
+.node {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  line-height: 1.2;
+  border: 2px solid var(--yano-accent);
+  border-radius: 0.5rem;
+  background: var(--yano-accent-soft);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.flow .node {
+  grid-row: 1;
+}
+
+.base .node {
+  grid-row: 2;
+  border-style: dashed;
+  font-size: 0.95rem;
+}
+
+/* v-click で見えた瞬間から、--i の順に少しずつずらして出す */
+.flow:not(.slidev-vclick-hidden) .node {
+  animation:
+    pop 0.35s both calc(var(--i) * 0.12s),
+    lit calc(var(--scene-step) * var(--len, 1)) calc(var(--scene-start) + var(--i) * var(--scene-step));
+}
+
+.base:not(.slidev-vclick-hidden) .node {
+  animation: rise 0.4s both;
+  animation-delay: calc(var(--i) * 0.12s);
+}
+
+.band {
+  position: relative;
+  z-index: 1;
+  border: 2px solid var(--yano-muted);
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--yano-muted) 30%, transparent);
+}
+
+.band-tag {
+  position: absolute;
+  top: -0.7rem;
+  left: 0.4rem;
+  padding: 0 0.4rem;
+  border-radius: 0.25rem;
+  background: var(--yano-muted);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* 本がカバーしていない箱を、赤い点線で囲んで抜けを目立たせる */
+.hole {
+  margin: -0.25rem;
+  border: 3px dashed var(--yano-emphasis);
+  border-radius: 0.6rem;
+}
+
+.gap-note {
+  position: absolute;
+  inset: auto 0 -2.5rem;
+}
+
+.gap-label {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--yano-emphasis);
+}
+
+/* 締めの一言は KeyMessage(下部)ではなく、図の上に重ねて中央に大きく出す */
+.finale {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: color-mix(in srgb, var(--yano-accent-soft) 85%, transparent);
+}
+
+.finale:not(.slidev-vclick-hidden) .finale-text {
+  animation: pop 0.4s both;
+}
+
+.finale-text {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--yano-emphasis);
+}
+
+.finale-en {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--yano-muted);
+}
+
+@keyframes lit {
+  15%, 85% { background: var(--yano-accent); color: white; }
+}
+
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(1rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 
 <!--
-55秒。ロボット制御を研究していた自分でも、自動運転は学びにくかった。講習は理論だけで、残りは本・記事・サンプルコードの寄せ集め
-→ (クリック)理想の入門書がない、だったら自分で作ればいい
-→ (クリック)自動運転は人の運転と同じで、見る・決める・動かすの繰り返し。その全部を動くコードにした(専門用語では 認識・経路計画・制御)
-→ (クリック)いろんな情報と人に助けられてきたので、その恩返し。次は「動かす」=ハンドルの切り方で遊んでみる
+60秒。自動運転は「技術の総合格闘技」と言われるくらい、知識の幅が広い。自分も新卒で配属されたとき、講習で学べたのは理論までで、残りは本・記事・サンプルコードの寄せ集めだった
+→ (クリック)アニメーションが自動で流れる。センサで周りを見て、自分の位置を推定して、障害物を認識して、よける道を決めて、その道に沿うようにハンドルを切る。それぞれが1つの分野
+→ (クリック)しかもその下に、数学、物理学、アルゴリズムとデータ構造、ソフト設計、それを1つにまとめるシステムアーキテクチャといった基礎知識がある
+→ (クリック)本はたくさんある。でもよくあるのは、大体はカバーしているけれど、経路計画や制御までは無い、設計やアーキテクチャまでは触れていない、という本
+→ (クリック)自分が探した範囲では、全部を通しで学べる本は見つからなかった
+→ (クリック)だったら、無ければ作ろう！
 -->
 
 ---
