@@ -154,6 +154,9 @@ layout: none
 <div v-click="5" class="finale">
   <div class="finale-text">無ければ作ろう！</div>
   <div class="finale-en">Want it or make it!</div>
+  <div v-click="6" class="finale-but">…でも、一人じゃ大変 <span class="text-base">/ But it's too much for one person</span></div>
+  <div v-click="7" class="finale-text oss">OSSにしてみんなで作ればいい！</div>
+  <div v-click="7" class="finale-en">So let's build it together as OSS!</div>
 </div>
 
 <style>
@@ -161,53 +164,6 @@ layout: none
 .autonomy {
   --scene-start: 0.9s;
   --scene-step: 1.2s;
-}
-
-/* 流れ・土台・本の帯を、行ラベルの列 + 30列(要素技術5つ・基礎知識6つが割り切れる)の同じ格子の層として重ね、帯がどの箱にかぶるかを位置で示す */
-.map {
-  position: relative;
-  display: grid;
-}
-
-/* 層ごとに v-click の表示切り替えが効くよう、display: contents にはしない */
-.layer {
-  grid-area: 1 / 1;
-  display: grid;
-  grid-template-columns: 4rem repeat(30, 1fr);
-  grid-template-rows: 3rem 3rem;
-  gap: 0.75rem 0.5rem;
-}
-
-.row-label {
-  grid-column: 1;
-  display: grid;
-  place-items: center start;
-  font-size: 0.85rem;
-  font-weight: 900;
-  line-height: 1.2;
-  color: var(--yano-accent);
-}
-
-.node {
-  display: grid;
-  place-items: center;
-  text-align: center;
-  line-height: 1.2;
-  border: 2px solid var(--yano-accent);
-  border-radius: 0.5rem;
-  background: var(--yano-accent-soft);
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.flow .node {
-  grid-row: 1;
-}
-
-.base .node {
-  grid-row: 2;
-  border-style: dashed;
-  font-size: 0.95rem;
 }
 
 /* v-click で見えた瞬間から、--i の順に少しずつずらして出す */
@@ -220,27 +176,6 @@ layout: none
 .base:not(.slidev-vclick-hidden) .node {
   animation: rise 0.4s both;
   animation-delay: calc(var(--i) * 0.12s);
-}
-
-.band {
-  position: relative;
-  z-index: 1;
-  border: 2px solid var(--yano-muted);
-  border-radius: 0.5rem;
-  background: color-mix(in srgb, var(--yano-muted) 30%, transparent);
-}
-
-.band-tag {
-  position: absolute;
-  top: -0.7rem;
-  left: 0.4rem;
-  padding: 0 0.4rem;
-  border-radius: 0.25rem;
-  background: var(--yano-muted);
-  color: white;
-  font-size: 0.75rem;
-  font-weight: 700;
-  white-space: nowrap;
 }
 
 /* 本がカバーしていない箱を、赤い点線で囲んで抜けを目立たせる */
@@ -274,15 +209,15 @@ layout: none
   display: grid;
   place-content: center;
   text-align: center;
-  background: color-mix(in srgb, var(--yano-accent-soft) 85%, transparent);
+  background: color-mix(in srgb, var(--yano-accent-soft) 95%, transparent);
 }
 
-.finale:not(.slidev-vclick-hidden) .finale-text {
+.finale:not(.slidev-vclick-hidden) .finale-text:first-child {
   animation: pop 0.4s both;
 }
 
 .finale-text {
-  font-size: 4.5rem;
+  font-size: 3.25rem;
   font-weight: 900;
   line-height: 1.2;
   color: var(--yano-emphasis);
@@ -292,6 +227,21 @@ layout: none
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--yano-muted);
+}
+
+.finale-but {
+  margin-top: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--yano-muted);
+}
+
+.finale-text.oss {
+  margin-top: 0.75rem;
+}
+
+.finale-text.oss:not(.slidev-vclick-hidden) {
+  animation: pop 0.4s both;
 }
 
 @keyframes lit {
@@ -316,6 +266,158 @@ layout: none
 → (クリック)本はたくさんある。でもよくあるのは、大体はカバーしているけれど、経路計画や制御までは無い、設計やアーキテクチャまでは触れていない、という本
 → (クリック)自分が探した範囲では、全部を通しで学べる本は見つからなかった
 → (クリック)だったら、無ければ作ろう！
+→ (クリック)…でも、これを一人で全部書くのは大変
+→ (クリック)だったら、OSSにしてみんなで作ればいい
+-->
+
+---
+
+## だから作っている <span class="en">So I'm building it</span>
+
+<div class="text-base text-gray-600 dark:text-gray-300">
+  自動運転ソフトウェア開発の入門書を、OSSで
+  <span class="text-sm text-gray-400">/ A beginner's guide to autonomous driving software, as OSS</span>
+</div>
+
+<div class="map map-compact mt-5">
+  <div class="layer flow">
+    <div class="row-label" style="grid-row: 1">要素技術</div>
+    <div class="node" style="grid-column: 2 / 8">センシング</div>
+    <div class="node" style="grid-column: 8 / 14">自己位置推定</div>
+    <div class="node" style="grid-column: 14 / 20">認識</div>
+    <div class="node" style="grid-column: 20 / 26">経路計画</div>
+    <div class="node" style="grid-column: 26 / 32">制御</div>
+  </div>
+  <div class="layer base">
+    <div class="row-label" style="grid-row: 2">基礎知識</div>
+    <div class="node" style="grid-column: 2 / 7">数学</div>
+    <div class="node" style="grid-column: 7 / 12">物理学</div>
+    <div class="node" style="grid-column: 12 / 17">アルゴリズム</div>
+    <div class="node" style="grid-column: 17 / 22">データ構造</div>
+    <div class="node" style="grid-column: 22 / 27">ソフト設計</div>
+    <div class="node" style="grid-column: 27 / 32">システム<br>アーキテクチャ</div>
+  </div>
+  <div v-click="1" class="layer">
+    <div class="band ours" style="grid-area: 1 / 2 / 2 / 32"><span class="band-tag">このプロジェクトのカバー範囲</span></div>
+    <div class="band ours" style="grid-area: 2 / 2 / 3 / 32"></div>
+  </div>
+  <div v-click="2" class="layer">
+    <div class="wip" style="grid-area: 2 / 27 / 3 / 32"><span class="wip-tag">作成中</span></div>
+  </div>
+</div>
+
+<div class="mt-5 grid grid-cols-2 gap-6 items-start">
+
+<div v-click="2">
+  <div class="text-base font-black text-[var(--yano-accent)]">特徴 <span class="text-xs text-gray-400">Features</span></div>
+  <ul class="feature-list">
+    <li>要素技術から基礎知識まで、通しで <span class="feature-en">End to end</span></li>
+    <li>全部Pythonで動くシミュレーション付き <span class="feature-en">All runnable</span></li>
+    <li>部品を差し替えて、走りを比べられる <span class="feature-en">Swap and compare</span></li>
+  </ul>
+</div>
+
+<Callout v-click="3" label="みんなで作っている / Built together">
+  <div class="stats">
+    <div><div class="stat-num">1,926</div><div class="stat-label">Stars</div></div>
+    <div><div class="stat-num">13人</div><div class="stat-label">コントリビュータ</div></div>
+    <div><div class="stat-num">8割</div><div class="stat-label">他の人からのPR(マージ済み)</div></div>
+  </div>
+</Callout>
+
+</div>
+
+<KeyMessage v-click="4">
+
+  世界中のエンジニアと一緒に、全部入りの入門書を作る <span class="en">Building an all-in-one guide with engineers worldwide</span>
+
+</KeyMessage>
+
+<style>
+.map-compact .layer {
+  grid-template-rows: 2.4rem 2.4rem;
+}
+
+.map-compact .node {
+  font-size: 0.95rem;
+}
+
+.map-compact .base .node {
+  font-size: 0.8rem;
+}
+
+.feature-list {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.feature-list li {
+  margin-top: 0.3rem;
+}
+
+.feature-en {
+  font-size: 0.7rem;
+  color: var(--yano-muted);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--yano-accent);
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--yano-muted);
+}
+
+.band.ours {
+  border-color: var(--yano-accent);
+  background: color-mix(in srgb, var(--yano-accent) 25%, transparent);
+}
+
+.band.ours .band-tag {
+  background: var(--yano-accent);
+}
+
+/* 進行中の箱は、カバー範囲の上に点線で重ねて「まだ途中」と示す */
+.wip {
+  position: relative;
+  z-index: 2;
+  margin: -0.25rem;
+  border: 3px dashed var(--yano-accent);
+  border-radius: 0.6rem;
+}
+
+.wip-tag {
+  position: absolute;
+  top: -0.8rem;
+  right: 0.4rem;
+  padding: 0 0.4rem;
+  border-radius: 0.25rem;
+  background: var(--yano-accent-soft);
+  border: 2px solid var(--yano-accent);
+  color: var(--yano-accent);
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+</style>
+
+<!--
+50秒。だから作っている。自動運転ソフトウェア開発の入門書をOSSで
+→ (クリック)3枚目で抜けていたところも含めて、要素技術と基礎知識を全部通しでカバーするのが目標。正直に言うと、システムアーキテクチャはまだ作成中で、理論の解説ドキュメントも書いている途中
+→ (クリック)特徴は3つ。通しで学べる、全部Pythonで動く、部品を差し替えて比べられる
+→ (クリック)OSSにしたことで、世界中のエンジニアの知識が集まってきている。マージされたPRの8割以上(40件中33件)は他の人から。自分の勉強にもなる
+→ (クリック)世界中のエンジニアと一緒に、全部入りの入門書を作る
 -->
 
 ---
