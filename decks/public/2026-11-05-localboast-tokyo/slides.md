@@ -40,23 +40,23 @@ layout: none
     <img src="./images/icon.jpeg" class="w-25 h-25 rounded-full border-4 border-sky-100"/>
     <div>
       <div class="text-xl font-bold">Shisato Yano</div>
-      <div class="text-sm text-gray-400">自動運転システムエンジニア / Autonomous driving software engineer</div>
+      <div class="text-sm text-gray-400">自動運転システムエンジニア</div>
     </div>
   </div>
 </div>
 
 ---
 
-## 自己紹介 <span class="en">About me</span>
+## 自己紹介
 
-<div class="mt-4 grid grid-cols-2 gap-10 items-start">
+<div class="mt-6 grid grid-cols-2 gap-10 items-center">
 
 <div>
   <div class="flex items-center gap-5">
-    <img src="./images/icon.jpeg" class="w-24 h-24 rounded-full border-4 border-sky-100"/>
+    <img src="./images/icon.jpeg" class="w-28 h-28 rounded-full border-4 border-sky-100"/>
     <div>
       <div class="text-3xl font-black">Shisato Yano</div>
-      <div class="mt-2 flex gap-5 text-sm">
+      <div class="mt-2 flex gap-5 text-base">
         <a href="https://x.com/4310sy" target="_blank" class="flex items-center gap-1 !text-gray-700 dark:!text-gray-300 !border-none">
           <carbon-logo-x />@4310sy
         </a>
@@ -66,29 +66,27 @@ layout: none
       </div>
     </div>
   </div>
-  <div class="mt-5 text-base leading-snug text-gray-600 dark:text-gray-300">
-    自動運転システムを作るソフトウェアエンジニア<br>
-    <span class="text-sm text-gray-400">Software engineer building autonomous driving systems</span>
+  <div class="mt-6 text-lg font-bold text-gray-600 dark:text-gray-300">
+    自動運転システムを作るソフトウェアエンジニア
   </div>
 </div>
 
 <div>
-  <div class="text-base font-bold text-gray-600 dark:text-gray-300">自動運転システムとは？ <span class="text-sm text-gray-400">What's an autonomous system?</span></div>
+  <div class="text-base font-bold text-gray-600 dark:text-gray-300">自動運転システムとは？</div>
   <div class="mt-2 grid">
-    <img v-click="[1, 2]" src="./images/komatsu_ahs.jpg" class="[grid-area:1/1] w-full h-48 object-cover rounded-lg" />
-    <img v-click="2" src="./images/eightknot_vessel.jpg" class="[grid-area:1/1] w-full h-48 object-cover rounded-lg" />
+    <img v-click="[1, 2]" src="./images/komatsu_ahs.jpg" class="[grid-area:1/1] w-full h-56 object-cover rounded-lg" />
+    <img v-click="2" src="./images/eightknot_vessel.jpg" class="[grid-area:1/1] w-full h-56 object-cover rounded-lg" />
   </div>
-  <div class="grid mt-1 text-sm">
-    <div v-click="[1, 2]" class="[grid-area:1/1]">でっかいトラックを無人で動かしたり<div class="text-xs text-gray-400">Driving giant trucks with nobody aboard</div></div>
-    <div v-click="2" class="[grid-area:1/1]">海の上で船を自律航行させたり<div class="text-xs text-gray-400">Letting boats sail on their own</div></div>
+  <div class="grid mt-1 text-base">
+    <div v-click="[1, 2]" class="[grid-area:1/1]">でっかいトラックを無人で動かしたり</div>
+    <div v-click="2" class="[grid-area:1/1]">海の上で船を自律航行させたり</div>
   </div>
 </div>
 
 </div>
 
-<Callout v-click="3" label="今日紹介するもの / What I'll introduce" class="mt-4">
-  <div class="text-2xl font-black text-[var(--yano-accent)]">自動運転ソフトウェア開発の入門書を作るOSSプロジェクト</div>
-  <div class="text-sm text-gray-500 dark:text-gray-400">An OSS project for a beginner's guide to autonomous driving software</div>
+<Callout v-click="3" label="今日紹介するもの" class="mt-6">
+  <div class="text-3xl font-black text-[var(--yano-accent)]">自動運転ソフトウェア開発の入門書を作るOSSプロジェクト</div>
 </Callout>
 
 <Ref v-click="[1, 2]">
@@ -109,18 +107,17 @@ layout: none
 
 ---
 
-## 自動運転を学ぶ上でのつらみ <span class="en">The pain of learning autonomous driving</span>
+## 自動運転を学ぶ上でのつらみ
 
 <div class="text-base text-gray-600 dark:text-gray-300">
   <span class="text-3xl font-black text-[var(--yano-emphasis)]">技術の総合格闘技</span> と言われるくらい、必要な知識の幅が広い
-  <div class="text-sm text-gray-400">It takes a wide range of tech, like mixed martial arts</div>
 </div>
 
 <div class="autonomy">
 
-<AutonomyScene class="mt-1" :play="$clicks >= 1" />
+<AutonomyScene class="mt-3" :play="$clicks >= 1" />
 
-<div class="map mt-4">
+<div class="map mt-6">
   <div v-click="1" class="layer flow">
     <div class="row-label" style="grid-row: 1">要素技術</div>
     <div class="node" style="--i: 0; grid-column: 2 / 8">センシング</div>
@@ -145,7 +142,7 @@ layout: none
     <div class="hole" style="grid-area: 2 / 22 / 3 / 32"></div>
   </div>
   <div v-click="4" class="gap-note">
-    <span class="gap-label">全部を通しで学べる本は見つからなかった <span class="text-xs opacity-80">/ None covered it all</span></span>
+    <span class="gap-label">全部を通しで学べる本は見つからなかった</span>
   </div>
 </div>
 
@@ -153,10 +150,8 @@ layout: none
 
 <div v-click="5" class="finale">
   <div class="finale-text">無ければ作ろう！</div>
-  <div class="finale-en">Want it or make it!</div>
-  <div v-click="6" class="finale-but">…でも、一人じゃ大変 <span class="text-base">/ But it's too much for one person</span></div>
+  <div v-click="6" class="finale-but">…でも、一人じゃ大変</div>
   <div v-click="7" class="finale-text oss">OSSにしてみんなで作ればいい！</div>
-  <div v-click="7" class="finale-en">So let's build it together as OSS!</div>
 </div>
 
 <style>
@@ -176,6 +171,11 @@ layout: none
 .base:not(.slidev-vclick-hidden) .node {
   animation: rise 0.4s both;
   animation-delay: calc(var(--i) * 0.12s);
+}
+
+.autonomy .layer {
+  grid-template-rows: 3.5rem 3.5rem;
+  row-gap: 1rem;
 }
 
 /* 本がカバーしていない箱を、赤い点線で囲んで抜けを目立たせる */
@@ -202,33 +202,6 @@ layout: none
 }
 
 /* 締めの一言は KeyMessage(下部)ではなく、図の上に重ねて中央に大きく出す */
-.finale {
-  position: absolute;
-  inset: 0;
-  z-index: 10;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  background: color-mix(in srgb, var(--yano-accent-soft) 95%, transparent);
-}
-
-.finale:not(.slidev-vclick-hidden) .finale-text:first-child {
-  animation: pop 0.4s both;
-}
-
-.finale-text {
-  font-size: 3.25rem;
-  font-weight: 900;
-  line-height: 1.2;
-  color: var(--yano-emphasis);
-}
-
-.finale-en {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--yano-muted);
-}
-
 .finale-but {
   margin-top: 1.5rem;
   font-size: 1.75rem;
@@ -272,168 +245,131 @@ layout: none
 
 ---
 
-## だから作っている <span class="en">So I'm building it</span>
+## OSS: AutonomousVehicleControlBeginnersGuide
 
-<div class="text-base text-gray-600 dark:text-gray-300">
-  自動運転ソフトウェア開発の入門書を、OSSで
-  <span class="text-sm text-gray-400">/ A beginner's guide to autonomous driving software, as OSS</span>
-</div>
+<div class="mt-4 grid grid-cols-2 gap-8 items-center">
 
-<div class="map map-compact mt-5">
-  <div class="layer flow">
-    <div class="row-label" style="grid-row: 1">要素技術</div>
-    <div class="node" style="grid-column: 2 / 8">センシング</div>
-    <div class="node" style="grid-column: 8 / 14">自己位置推定</div>
-    <div class="node" style="grid-column: 14 / 20">認識</div>
-    <div class="node" style="grid-column: 20 / 26">経路計画</div>
-    <div class="node" style="grid-column: 26 / 32">制御</div>
-  </div>
-  <div class="layer base">
-    <div class="row-label" style="grid-row: 2">基礎知識</div>
-    <div class="node" style="grid-column: 2 / 7">数学</div>
-    <div class="node" style="grid-column: 7 / 12">物理学</div>
-    <div class="node" style="grid-column: 12 / 17">アルゴリズム</div>
-    <div class="node" style="grid-column: 17 / 22">データ構造</div>
-    <div class="node" style="grid-column: 22 / 27">ソフト設計</div>
-    <div class="node" style="grid-column: 27 / 32">システム<br>アーキテクチャ</div>
-  </div>
-  <div v-click="1" class="layer">
-    <div class="band ours" style="grid-area: 1 / 2 / 2 / 32"><span class="band-tag">このプロジェクトのカバー範囲</span></div>
-    <div class="band ours" style="grid-area: 2 / 2 / 3 / 32"></div>
-  </div>
-  <div v-click="2" class="layer">
-    <div class="wip" style="grid-area: 2 / 27 / 3 / 32"><span class="wip-tag">作成中</span></div>
-  </div>
-</div>
-
-<div class="mt-5 grid grid-cols-2 gap-6 items-start">
-
-<div v-click="2">
-  <div class="text-base font-black text-[var(--yano-accent)]">特徴 <span class="text-xs text-gray-400">Features</span></div>
+<div v-click="1">
+  <div class="text-base font-black text-[var(--yano-accent)]">特徴</div>
   <ul class="feature-list">
-    <li>要素技術から基礎知識まで、通しで <span class="feature-en">End to end</span></li>
-    <li>全部Pythonで動くシミュレーション付き <span class="feature-en">All runnable</span></li>
-    <li>部品を差し替えて、走りを比べられる <span class="feature-en">Swap and compare</span></li>
+    <li>自動運転入門書を作るOSSプロジェクト</li>
+    <li>必要な基礎知識と要素技術を一通り網羅</li>
+    <li>サンプルコードで設計と実装も学べる</li>
   </ul>
 </div>
 
-<Callout v-click="3" label="みんなで作っている / Built together">
-  <div class="stats">
-    <div><div class="stat-num">1,926</div><div class="stat-label">Stars</div></div>
-    <div><div class="stat-num">13人</div><div class="stat-label">コントリビュータ</div></div>
-    <div><div class="stat-num">8割</div><div class="stat-label">他の人からのPR(マージ済み)</div></div>
+<div v-click="2">
+  <div class="text-base font-black text-[var(--yano-accent)]">GitHubリポジトリ</div>
+  <div class="repo">
+    <img src="./images/repo_card.png" class="repo-card" />
+    <div class="stats">
+      <div><span class="stat-num">1,927</span><span class="stat-label">Stars</span></div>
+      <div><span class="stat-num">14</span><span class="stat-label">Contributors</span></div>
+      <div><span class="stat-num">314</span><span class="stat-label">Forks</span></div>
+    </div>
   </div>
-</Callout>
+</div>
 
 </div>
 
-<KeyMessage v-click="4">
+<div v-click="3" class="mt-5">
+  <div class="text-base font-black text-[var(--yano-accent)]">いろんな自動運転シミュレーションができちゃう！！</div>
+  <div class="sims">
+    <figure><img src="./images/lidar_thumb.gif" /><figcaption>センシング</figcaption></figure>
+    <figure><img src="./images/ekf_thumb.gif" /><figcaption>自己位置推定</figcaption></figure>
+    <figure><img src="./images/rectangle_fitting_thumb.gif" /><figcaption>認識</figcaption></figure>
+    <figure><img src="./images/astar_search_thumb.gif" /><figcaption>経路計画</figcaption></figure>
+    <figure><img src="./images/pure_pursuit_thumb.gif" /><figcaption>制御</figcaption></figure>
+  </div>
+</div>
 
-  世界中のエンジニアと一緒に、全部入りの入門書を作る <span class="en">Building an all-in-one guide with engineers worldwide</span>
-
-</KeyMessage>
+<div v-click="4" class="finale">
+  <div class="finale-text">世界中のエンジニアと一緒に、<br>全部入りの入門書を作る</div>
+</div>
 
 <style>
-.map-compact .layer {
-  grid-template-rows: 2.4rem 2.4rem;
-}
-
-.map-compact .node {
-  font-size: 0.95rem;
-}
-
-.map-compact .base .node {
-  font-size: 0.8rem;
-}
-
 .feature-list {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .feature-list li {
-  margin-top: 0.3rem;
+  margin-top: 0.5rem;
 }
 
-.feature-en {
-  font-size: 0.7rem;
-  color: var(--yano-muted);
-}
-
-.stats {
+.repo {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 15rem 1fr;
   gap: 0.75rem;
-  text-align: center;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.repo-card {
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
 }
 
 .stat-num {
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   font-weight: 900;
+  line-height: 1.1;
   color: var(--yano-accent);
 }
 
 .stat-label {
-  font-size: 0.7rem;
+  margin-left: 0.3rem;
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--yano-muted);
 }
 
-.band.ours {
-  border-color: var(--yano-accent);
-  background: color-mix(in srgb, var(--yano-accent) 25%, transparent);
+.sims {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.25rem;
 }
 
-.band.ours .band-tag {
-  background: var(--yano-accent);
+.sims img {
+  width: 100%;
+  height: 11.5rem;
+  padding: 0.25rem;
+  object-fit: contain;
+  background: white;
+  border: 1px solid color-mix(in srgb, var(--yano-muted) 40%, transparent);
+  border-radius: 0.375rem;
 }
 
-/* 進行中の箱は、カバー範囲の上に点線で重ねて「まだ途中」と示す */
-.wip {
-  position: relative;
-  z-index: 2;
-  margin: -0.25rem;
-  border: 3px dashed var(--yano-accent);
-  border-radius: 0.6rem;
-}
-
-.wip-tag {
-  position: absolute;
-  top: -0.8rem;
-  right: 0.4rem;
-  padding: 0 0.4rem;
-  border-radius: 0.25rem;
-  background: var(--yano-accent-soft);
-  border: 2px solid var(--yano-accent);
+.sims figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
   color: var(--yano-accent);
-  font-size: 0.75rem;
-  font-weight: 900;
 }
 </style>
 
 <!--
-50秒。だから作っている。自動運転ソフトウェア開発の入門書をOSSで
-→ (クリック)3枚目で抜けていたところも含めて、要素技術と基礎知識を全部通しでカバーするのが目標。正直に言うと、システムアーキテクチャはまだ作成中で、理論の解説ドキュメントも書いている途中
-→ (クリック)特徴は3つ。通しで学べる、全部Pythonで動く、部品を差し替えて比べられる
-→ (クリック)OSSにしたことで、世界中のエンジニアの知識が集まってきている。マージされたPRの8割以上(40件中33件)は他の人から。自分の勉強にもなる
+45秒。それで作っているのが、このAutonomousVehicleControlBeginnersGuide
+→ (クリック)特徴は3つ。自動運転の入門書を作るOSSプロジェクトで、3枚目で抜けていた経路計画・制御やアーキテクチャまで含めて、基礎知識と要素技術を一通りカバーする。サンプルコードを動かしながら、設計と実装も学べる。正直に言うと、システムアーキテクチャと理論の解説ドキュメントはまだ書いている途中
+→ (クリック)GitHubで公開していて、Starは約1,900、コントリビュータは14人、フォークは300以上。マージされたPRの8割以上は他の人から来ていて、自分の勉強にもなっている
+→ (クリック)シミュレーションはこんな感じ。センシング、自己位置推定、認識、経路計画、制御と、要素技術ごとに全部Pythonで動く
 → (クリック)世界中のエンジニアと一緒に、全部入りの入門書を作る
 -->
 
 ---
 
-## ハンドルの切り方は、1行差し替えるだけで変えられる <span class="en">Swap one line to change how it steers</span>
+## ハンドルの切り方は、1行差し替えるだけで変えられる
 
 <div class="mt-4 grid grid-cols-2 gap-6">
 
 <Callout label="Pure Pursuit">
   少し先の道の一点を目指してハンドルを切る
-  <div class="text-sm text-gray-500 dark:text-gray-400">Aim at a point a little ahead (like a human driver)</div>
 </Callout>
 
 <Callout label="Stanley">
   前輪がコースからずれた分を直す
-  <div class="text-sm text-gray-500 dark:text-gray-400">Correct how far the front wheel is off the course</div>
 </Callout>
 
 </div>
@@ -464,7 +400,7 @@ vis.draw()
 
 <KeyMessage v-click>
 
-  制御の部品を1行取り替えるだけで、違う走り方を試せる <span class="en">Swap one line and try a different way to drive</span>
+  制御の部品を1行取り替えるだけで、違う走り方を試せる
 
 </KeyMessage>
 
@@ -482,11 +418,10 @@ vis.draw()
 
 ---
 
-## 走らせて比べる <span class="en">Run and compare</span>
+## 走らせて比べる
 
 <div class="mt-2 text-center text-base">
   <span class="font-bold text-red-500">赤い線</span> = 走ってほしいコース、<span class="font-bold">黒い点</span> = 実際に走った跡
-  <span class="text-sm text-gray-400">/ Red: the course, Black: where the car actually went</span>
 </div>
 
 <div class="mt-3 grid grid-cols-2 gap-8 text-center">
@@ -513,7 +448,7 @@ vis.draw()
 
 <KeyMessage v-click="2">
 
-  同じ車・同じコースでも、ハンドルの切り方で走りが変わる <span class="en">Same car, same course, different driving</span>
+  同じ車・同じコースでも、ハンドルの切り方で走りが変わる
 
 </KeyMessage>
 
@@ -524,7 +459,7 @@ Pure Pursuitは先の点を目指すので、急カーブでは内側に入り�
 
 ---
 
-## まとめ <span class="en">Summary</span>
+## まとめ
 
 <v-clicks>
 
@@ -547,7 +482,7 @@ Pure Pursuitは先の点を目指すので、急カーブでは内側に入り�
 
 <KeyMessage v-click>
 
-  コードを動かして遊びながら、自動運転の面白さに触れてみよう <span class="en">Play with the code and discover the fun of autonomous driving</span>
+  コードを動かして遊びながら、自動運転の面白さに触れてみよう
 
 </KeyMessage>
 
@@ -573,7 +508,7 @@ Pure Pursuitは先の点を目指すので、急カーブでは内側に入り�
 
 ---
 
-## 遊んでみてください <span class="en">Have fun with it</span>
+## 遊んでみてください
 
 <div class="mt-6 grid grid-cols-[3fr_2fr] gap-8 items-center">
 
@@ -588,8 +523,8 @@ python src/simulations/path_tracking/stanley_path_tracking/stanley_path_tracking
 
 <div class="mt-4 text-base leading-loose">
 
-- 将来は書籍にする予定です / Planning to turn it into a book
-- フィードバック・Issue・Star 大歓迎！ / Feedback welcome!
+- 将来は書籍にする予定です
+- フィードバック・Issue・Star 大歓迎！
 
 </div>
 
@@ -605,5 +540,5 @@ python src/simulations/path_tracking/stanley_path_tracking/stanley_path_tracking
 </div>
 
 <div class="mt-6 text-center text-xl font-black text-[var(--yano-accent)]">
-  ご清聴ありがとうございました / Thank you! <span class="text-base text-gray-400">#localboast_tokyo</span>
+  ご清聴ありがとうございました <span class="text-base text-gray-400">#localboast_tokyo</span>
 </div>

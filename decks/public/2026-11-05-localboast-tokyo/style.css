@@ -78,3 +78,30 @@
   font-weight: 700;
   white-space: nowrap;
 }
+
+/* 図の上に重ねて締めの一文を大きく出す。KeyMessageより目立たせたいスライドの山場用 */
+.finale {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: color-mix(in srgb, var(--yano-accent-soft) 95%, transparent);
+}
+
+.finale:not(.slidev-vclick-hidden) .finale-text:first-child {
+  animation: finale-pop 0.4s both;
+}
+
+.finale-text {
+  font-size: 3.25rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--yano-emphasis);
+}
+
+@keyframes finale-pop {
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: scale(1); }
+}
