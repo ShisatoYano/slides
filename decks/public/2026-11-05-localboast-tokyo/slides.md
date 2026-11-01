@@ -73,13 +73,9 @@ layout: none
 
 <div>
   <div class="text-base font-bold text-gray-600 dark:text-gray-300">自動運転システムとは？</div>
-  <div class="mt-2 grid">
-    <img v-click="[1, 2]" src="./images/komatsu_ahs.jpg" class="[grid-area:1/1] w-full h-56 object-cover rounded-lg" />
-    <img v-click="2" src="./images/eightknot_vessel.jpg" class="[grid-area:1/1] w-full h-56 object-cover rounded-lg" />
-  </div>
-  <div class="grid mt-1 text-base">
-    <div v-click="[1, 2]" class="[grid-area:1/1]">でっかいトラックを無人で動かしたり</div>
-    <div v-click="2" class="[grid-area:1/1]">海の上で船を自律航行させたり</div>
+  <div class="mt-3 grid grid-cols-2 gap-4">
+    <div v-click="1" class="intro-item"><IntroVehicle kind="truck" class="intro-icon" />でっかいトラックを<br>無人で動かしたり</div>
+    <div v-click="2" class="intro-item"><IntroVehicle kind="boat" class="intro-icon" />海の上で船を<br>自律航行させたり</div>
   </div>
 </div>
 
@@ -89,17 +85,23 @@ layout: none
   <div class="text-3xl font-black text-[var(--yano-accent)]">自動運転ソフトウェア開発の入門書を作るOSSプロジェクト</div>
 </Callout>
 
-<Ref v-click="[1, 2]">
+<style>
+.intro-item {
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  background: var(--yano-accent-soft);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
 
-[コマツ ニュースリリース(2026年4月22日)](https://www.komatsu.jp/ja/newsroom/2026/20260422)
-
-</Ref>
-
-<Ref v-click="2">
-
-[エイトノット 公式サイト](https://8kt.jp/)
-
-</Ref>
+.intro-icon {
+  display: block;
+  width: 80%;
+  margin: 0 auto 0.75rem;
+}
+</style>
 
 <!--
 25秒。(クリック)鉱山の無人ダンプ → (クリック)小型船の自律航行と、陸でも海でも自動運転を作ってきた → (クリック)今日は、自動運転の入門書をOSSで作っている話をします
