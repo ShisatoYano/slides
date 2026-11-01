@@ -3,8 +3,8 @@ theme: default
 title: 無ければ作ろう！理想の技術書籍を作るOSSプロジェクト
 # 既定の '%s - Slidev' だとタブ名やSNSのカードのタイトルにツール名が付く
 titleTemplate: '%s'
-# GitHub Pages に公開する(scripts/build-pages.sh が見る)
-publish: true
+# GitHub Pages に公開する(scripts/build-pages.sh が見る)。発表が終わるまでは公開しない
+publish: false
 # SNSのクローラは相対パスの画像を解決しないため絶対URLで書く。auto はCIにブラウザがなく撮影できないので使わない
 # 説明文は info に書くとSlidevが前後に " を付けて出力するため ogDescription に書く
 seoMeta:
