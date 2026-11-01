@@ -360,101 +360,252 @@ layout: none
 
 ---
 
-## ハンドルの切り方は、1行差し替えるだけで変えられる
+## OSSとしてのこだわり
 
-<div class="mt-4 grid grid-cols-2 gap-6">
-
-<Callout label="Pure Pursuit">
-  少し先の道の一点を目指してハンドルを切る
-</Callout>
-
-<Callout label="Stanley">
-  前輪がコースからずれた分を直す
-</Callout>
-
-</div>
-
-<div class="mt-4">
-
-````md magic-move
-```python
-# ハンドルの切り方(制御方式)を作る
-controller = PurePursuitController(spec, course)
-# 車に持たせて走らせる
-vehicle = FourWheelsVehicle(state, spec, controller=controller)
-vis.add_object(vehicle)
-vis.draw()
-```
-
-```python
-# ハンドルの切り方(制御方式)を作る
-controller = StanleyController(spec, course)
-# 車に持たせて走らせる
-vehicle = FourWheelsVehicle(state, spec, controller=controller)
-vis.add_object(vehicle)
-vis.draw()
-```
-````
-
-</div>
-
-<KeyMessage v-click>
-
-  制御の部品を1行取り替えるだけで、違う走り方を試せる
-
-</KeyMessage>
-
-<Ref>
-
-シミュレーションのコードから抜粋(変数名は簡略化)
-
-</Ref>
-
-<!--
-60秒。Pure Pursuitは人が運転するときと同じで、少し先を見る。Stanleyは足元(前輪)のずれを見る。
-「なぜこの作りか」: 車・コース・制御方式を別々の部品にしてあるので、制御方式を取り替えても他は一切変えなくていい。
-だから同じ条件で比べられる
--->
-
----
-
-## 走らせて比べる
-
-<div class="mt-2 text-center text-base">
-  <span class="font-bold text-red-500">赤い線</span> = 走ってほしいコース、<span class="font-bold">黒い点</span> = 実際に走った跡
-</div>
-
-<div class="mt-3 grid grid-cols-2 gap-8 text-center">
+<div class="mt-8 grid grid-cols-[21.5rem_minmax(0,1fr)] gap-5 items-start">
 
 <div>
-  <div class="text-lg font-black text-[var(--yano-accent)]">Pure Pursuit</div>
-  <div class="grid">
-    <img v-click.hide="1" src="./images/pure_pursuit.gif" class="[grid-area:1/1] h-52 mx-auto" />
-    <img v-click="1" src="./images/pure_pursuit_zoom.png" class="[grid-area:1/1] h-52 mx-auto object-contain" />
+  <div v-click="1" class="point" :class="{ active: $clicks === 1 }"><span class="point-num">1</span>誰でもすぐ動かせる</div>
+  <div v-click="2" class="point" :class="{ active: $clicks === 2 }"><span class="point-num">2</span>貢献しやすく、名前が残る</div>
+  <div v-click="3" class="point" :class="{ active: $clicks >= 3 }"><span class="point-num">3</span>コードベースでカスタマイズ可能</div>
+</div>
+
+<div class="grid grid-cols-[minmax(0,1fr)]">
+
+<div v-click="[1, 2]" class="detail">
+  <div class="reason">
+    <div class="detail-title">Dockerで環境構築を自動化</div>
+    <div class="reason-body">コンテナを立ち上げるだけで、必要なライブラリが全部入る</div>
   </div>
-  <div v-click="1" class="mt-1 text-sm">急カーブで内側を近道し、抜けたあと外に膨らむ</div>
-</div>
-
-<div>
-  <div class="text-lg font-black text-[var(--yano-accent)]">Stanley</div>
-  <div class="grid">
-    <img v-click.hide="1" src="./images/stanley.gif" class="[grid-area:1/1] h-52 mx-auto" />
-    <img v-click="1" src="./images/stanley_zoom.png" class="[grid-area:1/1] h-52 mx-auto object-contain" />
+  <div class="reason">
+    <div class="detail-title">シミュレーションはコマンド一つで実行</div>
+    <code class="reason-cmd">python src/simulations/…/pure_pursuit_path_tracking.py</code>
   </div>
-  <div v-click="1" class="mt-1 text-sm">急カーブでもコースにぴったり沿う</div>
+  <div class="reason">
+    <div class="detail-title">クロスプラットフォーム対応</div>
+    <div class="chips">
+      <span>✓ Linux</span><span>✓ Windows</span><span>✓ macOS</span>
+    </div>
+    <div class="reason-body mt-2">3つのOSで、変更のたびに自動テスト</div>
+  </div>
+</div>
+
+<div v-click="[2, 3]" class="detail">
+  <div class="detail-title">コントリビューションガイドを完備</div>
+  <div class="guide">
+    <div class="guide-file">HOWTOCONTRIBUTE.md</div>
+    <ol class="guide-steps">
+      <li>Issueで提案する</li>
+      <li>ルールに沿って実装する(Python・シンプルに)</li>
+      <li>ユニットテストを追加する</li>
+      <li>PRを出してレビューを受ける</li>
+    </ol>
+    <div class="guide-more">ほかに: 不具合の報告と修正 / ドキュメントの追加 / AIコーディングツール向けのCLAUDE.md</div>
+  </div>
+  <div class="detail-note">マージされると、作者名付きでサンプル一覧に自動で載る</div>
+</div>
+
+<div v-click="3" class="detail">
+  <div class="detail-title">モジュールの組み合わせで、多彩なシミュレーション</div>
+  <div class="menu">
+    <div><span class="menu-num">2</span>種<div class="menu-label">センサ</div></div>
+    <div><span class="menu-num">3</span>種<div class="menu-label">自己位置推定</div></div>
+    <div><span class="menu-num">16</span>種<div class="menu-label">経路計画</div></div>
+    <div><span class="menu-num">6</span>種<div class="menu-label">制御</div></div>
+  </div>
+  <div class="grid grid-cols-2 gap-4 mt-3">
+    <figure>
+      <img src="./images/ekf_thumb.gif" class="combo" />
+      <figcaption><b>位置を推定しながら走る</b><br>センサ + 自己位置推定 + 制御</figcaption>
+    </figure>
+    <figure>
+      <img src="./images/astar_thumb.gif" class="combo" />
+      <figcaption><b>道を探してから走る</b><br>経路計画 + 制御</figcaption>
+    </figure>
+  </div>
+  <div class="detail-title mt-4">コードも直接書き換えて、もっと自由に</div>
+  <div class="reason-body whitespace-nowrap">実装がシンプルなので、アルゴリズムの中身まで手を入れやすい</div>
 </div>
 
 </div>
 
-<KeyMessage v-click="2">
+</div>
 
-  同じ車・同じコースでも、ハンドルの切り方で走りが変わる
+<style>
+.point {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 1.15rem;
+  white-space: nowrap;
+  font-weight: 900;
+  color: var(--yano-muted);
+  transition: background 0.3s, color 0.3s;
+}
 
-</KeyMessage>
+.point.active {
+  background: var(--yano-accent-soft);
+  color: var(--yano-accent);
+}
+
+.point-num {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  background: var(--yano-muted);
+  color: white;
+}
+
+.point.active .point-num {
+  background: var(--yano-accent);
+}
+
+.detail {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 20rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--yano-accent-soft);
+}
+
+.detail-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--yano-accent);
+}
+
+.detail-note {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.reason + .reason {
+  margin-top: 1.25rem;
+}
+
+.reason .detail-title {
+  margin-bottom: 0.3rem;
+}
+
+.reason-body {
+  font-size: 0.95rem;
+}
+
+.reason-cmd {
+  display: block;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.375rem;
+  background: var(--yano-code-bg);
+  color: var(--yano-term-fg);
+  font-size: 0.8rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chips span {
+  padding: 0.3rem 0.8rem;
+  border: 2px solid var(--yano-accent);
+  border-radius: 9999px;
+  background: white;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.guide {
+  padding: 0.75rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--yano-muted) 40%, transparent);
+  border-radius: 0.375rem;
+  background: white;
+}
+
+.guide-file {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--yano-muted) 40%, transparent);
+  font-family: var(--slidev-code-font-family, monospace);
+  font-weight: 700;
+}
+
+.guide-steps {
+  margin: 0.5rem 0 0;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.guide-more {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--yano-muted);
+}
+
+.detail figure {
+  text-align: center;
+}
+
+.detail img {
+  width: 100%;
+  border-radius: 0.375rem;
+  background: white;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.menu > div {
+  padding: 0.3rem 0;
+  border: 2px solid var(--yano-accent);
+  border-radius: 0.5rem;
+  background: white;
+}
+
+.menu-num {
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--yano-accent);
+}
+
+.menu-label {
+  font-size: 0.85rem;
+}
+
+.detail img.combo {
+  height: 5.5rem;
+  object-fit: contain;
+}
+
+.detail figcaption {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+</style>
 
 <!--
-80秒。まずGIFを流して全体を見せ、「右奥の急カーブに注目」と言ってからクリックで拡大図に切り替える。
-Pure Pursuitは先の点を目指すので、急カーブでは内側に入り込む。Stanleyは前輪のずれを直し続けるのでコースから離れにくい
+50秒。OSSとして、こだわっていることが3つある
+→ (クリック)1つ目、誰でもすぐ動かせること。Dockerで環境構築が自動でできて、シミュレーションはコマンド一つで動く。Linux・Windows・Macのどれでも動くように、変更のたびに3つのOSで自動テストしている
+→ (クリック)2つ目、貢献しやすく、名前が残ること。コントリビューションガイドをちゃんと用意していて、Issueでの提案から、実装のルール、テストの追加、PRとレビューまでの手順が全部書いてある。AIコーディングツール向けのCLAUDE.mdもある。マージされると作者名付きでサンプル一覧に自動で載る
+→ (クリック)3つ目、コードベースでカスタマイズできること。3枚目で出てきた要素技術がそれぞれモジュールになっていて、例えば経路計画は16種類、制御は6種類から選べる。これを組み合わせて走らせる。左はセンサで位置を推定しながら走る、右は道を探してからその道に沿って走る。組み合わせ次第でいろんなシミュレーションができる。さらに実装がシンプルなので、アルゴリズムの中身まで直接手を入れて自由に遊べる
 -->
 
 ---
