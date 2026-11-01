@@ -284,7 +284,7 @@ layout: none
 </div>
 
 <div v-click="4" class="finale">
-  <div class="finale-text">世界中のエンジニアと協力すれば<br>みんなの理想の技術書が作れるはず！！</div>
+  <div class="finale-text">世界中のエンジニアと協力すれば<br>理想の技術書が作れるはず！！</div>
 </div>
 
 <style>
