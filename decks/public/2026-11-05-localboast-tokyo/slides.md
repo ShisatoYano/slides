@@ -252,7 +252,7 @@ layout: none
 <div v-click="1">
   <div class="text-base font-black text-[var(--yano-accent)]">特徴</div>
   <ul class="feature-list">
-    <li>自動運転入門書を作るOSSプロジェクト</li>
+    <li>書籍化を目指す、自動運転入門書のOSS</li>
     <li>必要な基礎知識と要素技術を一通り網羅</li>
     <li>サンプルコードで設計と実装も学べる</li>
   </ul>
@@ -352,7 +352,7 @@ layout: none
 
 <!--
 45秒。それで作っているのが、このAutonomousVehicleControlBeginnersGuide
-→ (クリック)特徴は3つ。自動運転の入門書を作るOSSプロジェクトで、3枚目で抜けていた経路計画・制御やアーキテクチャまで含めて、基礎知識と要素技術を一通りカバーする。サンプルコードを動かしながら、設計と実装も学べる。正直に言うと、システムアーキテクチャと理論の解説ドキュメントはまだ書いている途中
+→ (クリック)特徴は3つ。自動運転の入門書を作るOSSプロジェクトで、ゴールは書籍にすること。3枚目で抜けていた経路計画・制御やアーキテクチャまで含めて、基礎知識と要素技術を一通りカバーする。サンプルコードを動かしながら、設計と実装も学べる。正直に言うと、システムアーキテクチャと理論の解説ドキュメントはまだ書いている途中
 → (クリック)GitHubで公開していて、Starは約1,900、コントリビュータは14人、フォークは300以上。マージされたPRの8割以上は他の人から来ていて、自分の勉強にもなっている
 → (クリック)シミュレーションはこんな感じ。センシング、自己位置推定、認識、経路計画、制御と、要素技術ごとに全部Pythonで動く
 → (クリック)世界中のエンジニアと一緒に、全部入りの入門書を作る
@@ -612,84 +612,100 @@ layout: none
 
 ## まとめ
 
-<v-clicks>
-
-<div class="summary">
-  <div class="summary-verb">仕組み</div>
-  <div>見る・決める・動かす、の繰り返しで車が自分で走る</div>
+<div class="mt-6">
+  <div v-click="1" class="summary">
+    <div class="summary-verb">課題</div>
+    <div>自動運転は技術の総合格闘技。全部を通しで学べる本がない</div>
+  </div>
+  <div v-click="2" class="summary">
+    <div class="summary-verb">解決</div>
+    <div>無ければ作ろう！ OSSにして、世界中のエンジニアと一緒に作っている</div>
+  </div>
+  <div v-click="3" class="summary">
+    <div class="summary-verb">こだわり</div>
+    <div>すぐ動かせて、貢献しやすく、自由にカスタマイズできる</div>
+  </div>
 </div>
 
-<div class="summary">
-  <div class="summary-verb">コード</div>
-  <div>認識から制御まで、全分野が動くPythonコードになっている</div>
+<div v-click="4" class="try mt-10 grid grid-cols-[minmax(0,1fr)_10rem] gap-6 items-center">
+
+<div>
+  <div class="try-title">試してみてください</div>
+  <ol class="try-steps">
+    <li><b>QRコード</b>からリポジトリを開く</li>
+    <li>READMEの<b>Quick Start</b>で環境を作る<span class="try-note">VS Code + Docker / Dockerのみ / ローカル</span></li>
+    <li>シミュレーションを<b>コマンド一つ</b>で実行</li>
+  </ol>
 </div>
 
-<div class="summary">
-  <div class="summary-verb">遊び方</div>
-  <div>部品を1行取り替えるだけで、走り方の違いを試せる</div>
+<div class="flex flex-col items-center gap-1">
+  <img src="./images/repo_qr.svg" class="w-36 h-36" />
+  <div class="flex items-center gap-1 text-sm font-bold"><carbon-logo-github />GitHubリポジトリ</div>
 </div>
 
-</v-clicks>
+</div>
 
-<KeyMessage v-click>
-
-  コードを動かして遊びながら、自動運転の面白さに触れてみよう
-
-</KeyMessage>
+<div v-click="5" class="finale">
+  <div class="finale-text">一緒に、理想の入門書を<br>作りませんか？</div>
+  <div class="finale-sub">Star・Issue・PR 大歓迎！ 将来は書籍にする予定です</div>
+  <div class="finale-sub">ご清聴ありがとうございました <span class="text-[var(--yano-accent)]">#localboast_tokyo</span></div>
+</div>
 
 <style>
 .summary {
   display: grid;
-  grid-template-columns: 7rem 1fr;
-  gap: 1rem;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0.75rem;
   align-items: center;
-  margin-top: 1.5rem;
-  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .summary-verb {
-  padding: 0.4rem 0;
+  padding: 0.3rem 0;
   border-radius: 0.5rem;
   background: var(--yano-accent-soft);
   text-align: center;
   font-weight: 900;
   color: var(--yano-accent);
 }
+
+.try-title {
+  margin-bottom: 0.4rem;
+  font-weight: 900;
+  color: var(--yano-accent);
+}
+
+.try-steps {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.try-steps b {
+  color: var(--yano-accent);
+}
+
+.try-note {
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--yano-muted);
+}
+
+.finale-sub {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--yano-muted);
+}
 </style>
 
----
-
-## 遊んでみてください
-
-<div class="mt-6 grid grid-cols-[3fr_2fr] gap-8 items-center">
-
-<div>
-
-```bash
-git clone https://github.com/ShisatoYano/AutonomousVehicleControlBeginnersGuide
-cd AutonomousVehicleControlBeginnersGuide
-pip install -r requirements.txt
-python src/simulations/path_tracking/stanley_path_tracking/stanley_path_tracking.py
-```
-
-<div class="mt-4 text-base leading-loose">
-
-- 将来は書籍にする予定です
-- フィードバック・Issue・Star 大歓迎！
-
-</div>
-
-</div>
-
-<div class="flex flex-col items-center gap-3">
-  <img src="./images/repo_qr.svg" class="w-36 h-36" />
-  <a href="https://github.com/ShisatoYano/AutonomousVehicleControlBeginnersGuide" target="_blank" class="!border-none">
-    <img src="./images/repo_card.png" class="w-full rounded-lg shadow-lg" />
-  </a>
-</div>
-
-</div>
-
-<div class="mt-6 text-center text-xl font-black text-[var(--yano-accent)]">
-  ご清聴ありがとうございました <span class="text-base text-gray-400">#localboast_tokyo</span>
-</div>
+<!--
+40秒。まとめ
+→ (クリック)自動運転は技術の総合格闘技で、全部を通しで学べる本が見つからなかった
+→ (クリック)だから無ければ作ろうと。OSSにして、世界中のエンジニアと一緒に作っている
+→ (クリック)誰でもすぐ動かせて、貢献しやすく、コードで自由にカスタマイズできるようにしている
+→ (クリック)QRコードからリポジトリを開いて、READMEのQuick Startに沿えば、VS Code + Docker、Dockerだけ、ローカルのどれでも環境が作れる。あとはコマンド一つでシミュレーションが動く
+→ (クリック)一緒に、理想の入門書を作りませんか？ Star・Issue・PR大歓迎。将来は書籍にする予定。ありがとうございました
+-->
