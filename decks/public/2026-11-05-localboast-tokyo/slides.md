@@ -153,7 +153,7 @@ layout: none
 <div v-click="5" class="finale">
   <div class="finale-text">無ければ作ろう！</div>
   <div v-click="6" class="finale-but">…でも、一人じゃ大変</div>
-  <div v-click="7" class="finale-text oss">OSSにしてみんなで作ればいい！</div>
+  <div v-click="7" class="finale-text oss">OSSでみんなでやればいいじゃないか！</div>
 </div>
 
 <style>
