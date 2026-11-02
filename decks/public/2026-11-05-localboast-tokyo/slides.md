@@ -72,7 +72,7 @@ layout: none
 </div>
 
 <div>
-  <div class="text-base font-bold text-gray-600 dark:text-gray-300">自動運転システムとは？</div>
+  <div v-click="1" class="text-base font-bold text-gray-600 dark:text-gray-300">こんなことやってます</div>
   <div class="mt-3 grid grid-cols-2 gap-4">
     <div v-click="1" class="intro-item"><IntroVehicle kind="truck" class="intro-icon" />でっかいトラックを<br>無人で動かしたり</div>
     <div v-click="2" class="intro-item"><IntroVehicle kind="boat" class="intro-icon" />海の上で船を<br>自律航行させたり</div>
@@ -81,7 +81,7 @@ layout: none
 
 </div>
 
-<Callout v-click="3" label="今日紹介するもの" class="mt-6">
+<Callout v-click="3" label="今日のテーマ" class="mt-6">
   <div class="text-3xl font-black text-[var(--yano-accent)]">自動運転ソフトウェア開発の入門書を作るOSSプロジェクト</div>
 </Callout>
 
