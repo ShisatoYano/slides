@@ -153,7 +153,7 @@ layout: none
 <div v-click="5" class="finale">
   <div class="finale-text">無ければ作ろう！</div>
   <div v-click="6" class="finale-but">…でも、一人じゃ大変</div>
-  <div v-click="7" class="finale-text oss">OSSでみんなでやればいいじゃないか！</div>
+  <div v-click="7" class="finale-text oss">OSSでみんなでやればいいのでは!?</div>
 </div>
 
 <style>
@@ -252,11 +252,12 @@ layout: none
 <div class="mt-4 grid grid-cols-2 gap-8 items-center">
 
 <div v-click="1">
-  <div class="text-base font-black text-[var(--yano-accent)]">特徴</div>
+  <div class="text-base font-black text-[var(--yano-accent)]">目指すあり方</div>
   <ul class="feature-list">
-    <li>書籍化を目指す、自動運転入門書のOSS</li>
-    <li>必要な基礎知識と要素技術を一通り網羅</li>
-    <li>サンプルコードで設計と実装も学べる</li>
+    <li>初学者でも手を出しやすくシンプルに</li>
+    <li>基礎知識からソフト実装まで体系的に</li>
+    <li>ハイスペPCとGPUがなくても動くように</li>
+    <li>最終的には書籍化して世に出したい</li>
   </ul>
 </div>
 
@@ -286,7 +287,7 @@ layout: none
 </div>
 
 <div v-click="4" class="finale">
-  <div class="finale-text">世界中のエンジニアと協力すれば<br>理想の技術書が作れるはず！！</div>
+  <div class="finale-text">どうすれば、みんなからの協力を<br>得られるようになるだろう??</div>
 </div>
 
 <style>
@@ -362,7 +363,7 @@ layout: none
 
 ---
 
-## OSSとしてのこだわり
+## OSSとしてのこだわりポイント
 
 <div class="mt-8 grid grid-cols-[21.5rem_minmax(0,1fr)] gap-5 items-start">
 
@@ -376,7 +377,7 @@ layout: none
 
 <div v-click="[1, 2]" class="detail">
   <div class="reason">
-    <div class="detail-title">Dockerで環境構築を自動化</div>
+    <div class="detail-title">Dockerで環境構築を簡略化</div>
     <div class="reason-body">コンテナを立ち上げるだけで、必要なライブラリが全部入る</div>
   </div>
   <div class="reason">
@@ -621,7 +622,7 @@ layout: none
   </div>
   <div v-click="2" class="summary">
     <div class="summary-verb">解決</div>
-    <div>無ければ作ろう！ OSSにして、世界中のエンジニアと一緒に作っている</div>
+    <div>無ければ作ろう！ OSSにして、世界中のエンジニアと一緒に作ろう！！</div>
   </div>
   <div v-click="3" class="summary">
     <div class="summary-verb">こだわり</div>
@@ -632,7 +633,7 @@ layout: none
 <div v-click="4" class="try mt-10 grid grid-cols-[minmax(0,1fr)_10rem] gap-6 items-center">
 
 <div>
-  <div class="try-title">試してみてください</div>
+  <div class="try-title">覗いてみてほしいな！触ってみてほしいな！！</div>
   <ol class="try-steps">
     <li><b>QRコード</b>からリポジトリを開く</li>
     <li>READMEの<b>Quick Start</b>で環境を作る<span class="try-note">VS Code + Docker / Dockerのみ / ローカル</span></li>
@@ -648,8 +649,8 @@ layout: none
 </div>
 
 <div v-click="5" class="finale">
-  <div class="finale-text">一緒に、理想の入門書を<br>作りませんか？</div>
-  <div class="finale-sub">Star・Issue・PR 大歓迎！ 将来は書籍にする予定です</div>
+  <div class="finale-text">自動運転の世界をもっと布教したい！</div>
+  <div class="finale-sub">Star・Issue・PR 大歓迎！</div>
   <div class="finale-sub">ご清聴ありがとうございました <span class="text-[var(--yano-accent)]">#localboast_tokyo</span></div>
 </div>
 
