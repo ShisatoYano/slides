@@ -3,8 +3,8 @@ theme: default
 title: 無ければ作ろう！理想の技術書籍を作るOSSプロジェクト
 # 既定の '%s - Slidev' だとタブ名やSNSのカードのタイトルにツール名が付く
 titleTemplate: '%s'
-# GitHub Pages に公開する(scripts/build-pages.sh が見る)。発表が終わるまでは公開しない
-publish: false
+# GitHub Pages に公開する(scripts/build-pages.sh が見る)
+publish: true
 # SNSのクローラは相対パスの画像を解決しないため絶対URLで書く。auto はCIにブラウザがなく撮影できないので使わない
 # 説明文は info に書くとSlidevが前後に " を付けて出力するため ogDescription に書く
 seoMeta:
@@ -266,9 +266,9 @@ layout: none
   <div class="repo">
     <img src="./images/repo_card.png" class="repo-card" />
     <div class="stats">
-      <div><span class="stat-num">1,927</span><span class="stat-label">Stars</span></div>
+      <div><span class="stat-num">1,931</span><span class="stat-label">Stars</span></div>
       <div><span class="stat-num">14</span><span class="stat-label">Contributors</span></div>
-      <div><span class="stat-num">314</span><span class="stat-label">Forks</span></div>
+      <div><span class="stat-num">319</span><span class="stat-label">Forks</span></div>
     </div>
   </div>
 </div>
