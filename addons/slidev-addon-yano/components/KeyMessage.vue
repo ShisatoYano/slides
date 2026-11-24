@@ -13,6 +13,7 @@
   bottom: 3rem;
   padding-inline: 3.5rem;
   text-align: center;
+  font-family: var(--yano-font-heading);
   font-size: 1.25rem;
   font-weight: 900;
   color: var(--yano-emphasis);

@@ -1,5 +1,8 @@
 /* 部品とレイアウトの配色。Slidevがアドオンの styles/index.css を自動で読み込むので、デッキ側の部品からも使える */
 :root {
+  /* 見出し用の書体。アドオンからはフォントを読み込めないので、デッキのheadmatterの fonts.sans に並べて読み込ませる */
+  --yano-font-heading: 'Zen Kaku Gothic New', var(--slidev-font-sans, sans-serif);
+
   /* デッキ全体の配色 */
   --yano-accent: #0369a1;
   --yano-accent-soft: #f0f9ff;
@@ -32,9 +35,18 @@ html.dark {
   --yano-label: #0284c7;
 }
 
-/* Slidevが読み込むリセットCSSが見出しの太さを本文と同じに戻すため、ここで太字に戻す。章扉と KeyMessage は 900 で別に指定している */
+/* Slidevが読み込むリセットCSSが見出しの太さを本文と同じに戻すため、ここで指定し直す */
 .slidev-layout h1,
 .slidev-layout h2 {
+  font-family: var(--yano-font-heading);
+  font-weight: 900;
+  word-break: auto-phrase;
+  text-wrap: balance;
+}
+
+/* 文中の数値を本文より少し大きく太くする。デッキ側では MDC記法で [12km]{.num} と書く */
+.slidev-layout .num {
+  font-size: 1.12em;
   font-weight: 700;
 }
 
